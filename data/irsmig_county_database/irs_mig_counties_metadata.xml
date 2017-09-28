@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<metadata
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:dcterms="http://purl.org/dc/terms/">
+<dc:title>IRS Migration Database</dc:title>
+<dc:creator>Janine Billadello</dc:creator>
+<dc:subject xsi:type="dcterms:LCSH">Tax returns--United States</dc:subject>
+<dc:subject xsi:type="dcterms:LCSH">Tax exemption--United States</dc:subject>
+<dc:subject xsi:type="dcterms:LCSH">Migration</dc:subject>
+<dc:subject xsi:type="dcterms:LCSH">United States. Internal Revenue Service. Statistics of Income Division</dc:subject>
+<dc:subject xsi:type="dcterms:LCSH">Counties</dc:subject>
+<dc:description>This SQLite database compiles county to county migration data produced by the IRS Statistics of Income Division (SOI) for the years 1990 - 2015. When a filer submits a tax return, the address for that year is compared to the filer’s address in the previous year. If the two addresses differ, the filer is considered to have moved. The IRS SOI division generates inflow tables (total number of filers who moved into counties) and outflow tables (total number of filers who moved out of counties) for each year. In addition to the inflow and outflow data tables, summary tables were added to the final SQLite database; these separate the aggregate total number of migrants per county in each year from the raw data tables. The annual nature of this dataset makes it valuable for the study of migration patterns within the United States over time.
+</dc:description>
+<dc:publisher>Newman Library, Baruch College, CUNY</dc:publisher>
+<dc:contributor>Frank Donnelly</dc:contributor>
+<dc:contributor>Anastasia Clark</dc:contributor>
+<dc:date xsi:type="dcterms:W3CDTF">2017-05</dc:date>
+<dc:type xsi:type="dcterms:DCMIType">Dataset</dc:type>
+<dc:format>sqlite</dc:format>
+<dc:identifier>irs_migration_county.sqlite</dc:identifier>
+<dc:identifier xsi:type="dcterms:URI">https://www.baruch.cuny.edu/confluence/display/geoportal/IRS+Migration+Database</dc:identifier>
+<dc:source xsi:type="dcterms:URI">https://www.irs.gov/uac/SOI-Tax-Stats-Migration-Data</dc:source>
+<dc:source>SOI Tax Stats - Migration Data</dc:source>
+<dc:source xsi:type="dcterms:URI">https://www.census.gov/geo/reference/county-changes.html</dc:source>
+<dc:source>Substantial Changes to Counties and County Equivalent Entities: 1970-Present</dc:source>
+<dc:language xsi:type="dcterms:ISO639-3">eng</dc:language>
+<dcterms:temporal>1988-2015</dcterms:temporal>
+<dcterms:spatial xsi:type="dcterms:Box">name=United States;northlimit=71.406235;eastlimit=-66.969271;southlimit=18.921786;westlimit=-178.217598;units=deg;projection=WGS 84;</dcterms:spatial>
+<dcterms:license>Creative Commons Attribution-NonCommercial-ShareAlike CC BY-NC-SA</dcterms:license>
+<dc:rights xsi:type="dcterms:URI">https://creativecommons.org/licenses/by-nc-sa/4.0/</dc:rights>
+<dcterms:accrualperiodicity>Annual</dcterms:accrualperiodicity>
+<dcterms:accrualpolicy>Active</dcterms:accrualpolicy>
+
+</metadata>

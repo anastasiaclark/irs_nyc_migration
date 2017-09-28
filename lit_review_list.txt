@@ -1,0 +1,34 @@
+#Lit Review Articles
+
+- Allen2017: NYT opinion piece about African American millenials leaving NYC for the south.
+
+- Frey2017: blog post from Brookings that studies a revival in pre-recession patterns of migration.
+
+- IBO2009: NYC Independent Budget office report that looked at the IRS migration trends for NYC from 1989 to 2007. It showed net-migration was declining, and is much lower than recent numbers.
+
+- KDM2016: Detailed report on using the IRS migration data to study out-migration from Illinois.
+
+- Kusisto2017: DJ article that shows international migration is boosting urban populations.
+
+- Mazerov2014: Technical paper that looks at the flawed logic of using IRS migration data to show states losing tax income, and assuming people are leaving because of high taxes.
+
+- Miller2014: Slides from a Census Bureau presentation comparing IRS exemptions to census population counts.
+
+- Narkiewicz2016: Technical report that studies the statistics of income county to county migration data.
+
+- Pew2010: Report that studies migration trends in Philadelphia using the IRS migration data.
+
+- Pew2016: An update to the Pew2010 on migration trends in Philadelphia.
+
+- Riordan-Nold2016: Blog post that looks at flawed logic of using IRS migration data to show that Connecticut is losing people because of taxes.
+
+- Short2014: Academic journal article that categorizes US cities based on population change over the course of the 20th century.
+
+- Stone2016: Technical paper that looks at why people use the IRS data to study migration, with discussion of limitations. Related to KDM2016.
+
+- Terrazas2016: Blog post from Zillow that compares the three different data sources for studying migration with strengths and weaknesses of each.
+
+- Thompson2017: Atlantic Monthly article on why Americans are once again abandoning cities for suburbs, special focus on NYC.
+
+- Williams2015: NYT article on millenials leaving NYC for Los Angeles.
+

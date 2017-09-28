@@ -1,0 +1,79 @@
+IRS NYC Migration Project Notes
+Frank D, last updated Sept 19, 2017
+
+- NYC is ranked as an alpha global city and has been the top city in the US urban hierarchy for over 200 years. It occupies a key position as a center of global economics and culture.
+- Recently the city has shown several signs of strain: a lack of affordable housing, high commercial rents and vacant store fronts, an over-worked and deteriorating mass transit system, and other quality of life issues
+- Several recent NY Times and Wall Street Journal articles suggest that people are giving up on the city and leaving. There are articles on young people leaving for Los Angeles, people commuting from Philadelphia, and a new Great Migration of African Americans returning to cities in the south
+
+- Is NYC losing people to other places, or are these articles merely anectdotal? Where are they going?
+
+- This paper will look at recent data from the IRS Migration database and the Census Bureau's Population Estimates Program to see if people are going, and where
+
+- Article should be 10 pages max, for publication in the Weissmen Center's Occasional Paper's Series. The series focuses on the role of NYC in the national and global economy. Our paper must fit within this context and not focus on parochial issues (i.e. migration between boroughs for example)
+
+TO DO:
+
+LITERATURE
+
+- Look at articles from NYT, WSJ on migration, people leaving the city
+- Look at Census Bureau and Brookings for short research pieces that document national migration trends so we understand the bigger context
+- Look at other studies that use the same datasets (Pew report for Philly, older IBO report on NYC)
+- Look for guidance on interpreting the data (IRS publications, Zillow article on migration data)
+
+THE DATA
+
+- Need to look at Census Bureau Population Estimates relative to the IRS totals. The former is better for studying trends in aggregate as the IRS does not cover all movements. The latter is better for looking at point to point movements and to understand order of magnitude
+
+- Need to decide whether to look at returns (to estimate households) or exemptions (to estimate people). Will ignore AGI
+
+- Need to look at two scales: counties and metropolitan areas, which means we need to be able to aggregate the IRS county data up to the metropolitan level
+
+- Why counties? Central cities are growing again and becoming more desirable places to live. Many companies are leaving suburban locations to locate their offices in cities again. By looking at counties, we can see how NYC performs relative to its suburban neighbors, and to other big cities across the country. The county level is also meaningful in assessing a city's fiscal strength, as residents in the county pay property and income taxes to keep the city running
+
+- Why metro areas? Cities are part of cohesive regions that share economic and cultural connections, and in some sense if people or businesses move to a metro area all cities, towns, and counties can benefit from the jobs and growth this brings. Looking at the metro areas allows us to see how regions compete, while removing the urban / suburban issue from the equation
+
+- For the county-level analysis it's important that we identify which counties are part of the NYC metro area so we account for this when discussing the results
+
+- Time Frame: latest IRS data is from 2014-15. Best to look at the last 4 years - as individual years and as an aggregated whole:
+2014-15, 2013-14, 2012-13, 2011-12. Why? The IRS changed the way they collected and tabulated the data beginning with 2011-12, so if we look just at these four years as the recent past we avoid methodolgical issues. Also these four years encapsulate the post-recession years; the four years before this time cover the Great Recession and Foreclosure Crisis.By separating them we avoid collapsing two unrelated periods together.
+
+WHAT DO WE WANT TO KNOW?
+
+- From the Census numbers, overall net change and it's components (natutal increase / decrease, domestic and foreign migration). Census numbers give us the big picture and provide context and reality check for the IRS numbers
+
+- From The IRS: top sending areas, top receiving areas, net change (between NYC and another place, difference between number of people who arrive and leave), ratios (i.e. hypothetical - 2 New Yorkers go to LA for every Angelino that comes to NYC), consistency in numbers over time, consistency in senders / receivers over time
+
+- Summaries? Tables, stacked bar or pie charts, (maybe something else?), rankings, maps (showing top senders and receivers)
+
+- We may need to look at a few other top cities or metros to see if they display any trends that are similar to NYC (i.e. how much do they lose to suburbanizing counties? Are they growing or shrinking as a whole?)
+
+DATA CONSIDERATIONS
+
+- What's the best structure for analyzing and manipulating the data? The IRS data is in SQLite while the Census data is in a series of spreadhseets. Would also need to get a crosswalk of counties that shows what metro areas they are in.
+
+- Use Python to connect to DB and pull data out. How to store and structure it within Python most efficiently? Nested lists? Nested dictionaries? Pandas data frames?
+
+- What do we use to make charts and plots? Matplotlib is a pain. Seaborn? Bokeh? Can use numpy for some stats, Pandas appartently has some basic charting capabilities by itself. But let's stick with Python (not R)
+
+- Would be good to publish our data and processing work in an online notebook or github where the article can link to it. Where do we do the work? In either one of those places? Or use Dropbox / Box?
+
+PAPER STRUCTURE
+
+- Brief intro that states the purpose and provides some rationale for looking at the data
+- Explanation of the two different data sources (Census PEP and IRS), Baruch's IRS dataset, limits of the IRS data (including how it can be mis-used), and info on how others have used the same data
+- County Summary - census first then IRS senders, receivers, net
+- Metro Summary - census first then IRS senders, receivers, net
+- Conclusion (can be brief)
+
+PRELIMINARY OBSERVATIONS
+
+- According to the Census PEP, NYC is growing because of natural increase and foreign migration. It loses a LOT of people from domestic migration, but the first two factors are enough to outweigh it for small net gains each year. LA (a top receiver of New Yorkers) displays a similar pattern while DC (a top sender to New York) does not.
+
+- IRS data shows large net losses in terms of migration. For cities that lose more to New York then they gain, the gains to New York are modest. DC and Boston are recurring net senders. On the receiving side, the magnitude of loss is much higher. The city loses a lot to the surrounding suburban counties; Nassau and Westchester top the list each year. Outside the metro, LA and Austin TX are recurring net receivers. 
+
+- The IRS numbers also show a net loss from foreign migration, with more people leaving for foreign countries relative to arriving in NYC. This is contrary to the Census numbers, which show net gains from foreign migration. This suggests differences and shortcomings for how the IRS captures foreign migrants.
+
+
+
+
+

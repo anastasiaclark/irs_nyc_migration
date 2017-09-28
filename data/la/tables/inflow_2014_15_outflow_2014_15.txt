@@ -1,0 +1,426 @@
+LA Net Migration
+inflow_2014_15_outflow_2014_15
++--------+--------+-------------------------------+---------+---------+
+| county | stname |             coname            | returns | exempts |
++--------+--------+-------------------------------+---------+---------+
+| 17031  |   IL   |          Cook County          |   702   |   911   |
+| 48453  |   TX   |         Travis County         |   345   |   850   |
+| 36047  |   NY   |          Kings County         |   455   |   721   |
+| 36061  |   NY   |        New York County        |   453   |   634   |
+| 36081  |   NY   |         Queens County         |   256   |   421   |
+| 25017  |   MA   |        Middlesex County       |   159   |   216   |
+| 42101  |   PA   |      Philadelphia County      |   149   |   172   |
+| 36103  |   NY   |         Suffolk County        |   134   |   157   |
+| 34017  |   NJ   |         Hudson County         |    79   |   154   |
+| 36059  |   NY   |         Nassau County         |   118   |   149   |
+| 27053  |   MN   |        Hennepin County        |   114   |   135   |
+| 25025  |   MA   |         Suffolk County        |   107   |   131   |
+| 11001  |   DC   |      District of Columbia     |    40   |   104   |
+| 17043  |   IL   |         DuPage County         |    90   |   103   |
+| 36119  |   NY   |       Westchester County      |    81   |   103   |
+| 51059  |   VA   |         Fairfax County        |   101   |   102   |
+| 57005  |   FR   |     Foreign - APO/FPO ZIPs    |    38   |    98   |
+| 29189  |   MO   |        St. Louis County       |    69   |    97   |
+| 39035  |   OH   |        Cuyahoga County        |    69   |    93   |
+| 34003  |   NJ   |         Bergen County         |    72   |    91   |
+| 36005  |   NY   |          Bronx County         |    55   |    90   |
+| 09001  |   CT   |        Fairfield County       |    84   |    84   |
+| 09003  |   CT   |        Hartford County        |    62   |    76   |
+| 34025  |   NJ   |        Monmouth County        |    64   |    74   |
+| 17097  |   IL   |          Lake County          |    66   |    73   |
+| 26163  |   MI   |          Wayne County         |    62   |    71   |
+| 44007  |   RI   |       Providence County       |    64   |    70   |
+| 39095  |   OH   |          Lucas County         |    45   |    69   |
+| 34013  |   NJ   |          Essex County         |    52   |    66   |
+| 24033  |   MD   |     Prince George's County    |    47   |    65   |
+| 45079  |   SC   |        Richland County        |    33   |    65   |
+| 25013  |   MA   |         Hampden County        |    47   |    63   |
+| 24005  |   MD   |        Baltimore County       |    54   |    62   |
+| 34039  |   NJ   |          Union County         |    46   |    62   |
+| 25021  |   MA   |         Norfolk County        |    58   |    59   |
+| 47157  |   TN   |         Shelby County         |    34   |    59   |
+| 34023  |   NJ   |        Middlesex County       |    57   |    57   |
+| 35013  |   NM   |        Dona Ana County        |    30   |    56   |
+| 18097  |   IN   |         Marion County         |    44   |    55   |
+| 34027  |   NJ   |         Morris County         |    47   |    54   |
+| 06069  |   CA   |       San Benito County       |    29   |    53   |
+| 17111  |   IL   |         McHenry County        |    39   |    52   |
+| 24031  |   MD   |       Montgomery County       |    77   |    52   |
+| 51700  |   VA   |       Newport News city       |    25   |    51   |
+| 55133  |   WI   |        Waukesha County        |    30   |    51   |
+| 17163  |   IL   |        St. Clair County       |    27   |    50   |
+| 26099  |   MI   |         Macomb County         |    36   |    49   |
+| 42003  |   PA   |        Allegheny County       |    49   |    48   |
+| 42017  |   PA   |          Bucks County         |    47   |    48   |
+| 26125  |   MI   |         Oakland County        |    71   |    47   |
+| 51179  |   VA   |        Stafford County        |    28   |    47   |
+| 34001  |   NJ   |        Atlantic County        |    32   |    46   |
+| 42045  |   PA   |        Delaware County        |    42   |    46   |
+| 13153  |   GA   |         Houston County        |    24   |    43   |
+| 34005  |   NJ   |       Burlington County       |    32   |    42   |
+| 39017  |   OH   |         Butler County         |    27   |    41   |
+| 39093  |   OH   |         Lorain County         |    23   |    41   |
+| 53025  |   WA   |          Grant County         |    20   |    41   |
+| 26077  |   MI   |        Kalamazoo County       |    28   |    40   |
+| 27123  |   MN   |         Ramsey County         |    32   |    40   |
+| 34035  |   NJ   |        Somerset County        |    30   |    40   |
+| 01101  |   AL   |       Montgomery County       |    23   |    39   |
+| 24003  |   MD   |      Anne Arundel County      |    15   |    39   |
+| 09005  |   CT   |       Litchfield County       |    26   |    38   |
+| 37133  |   NC   |         Onslow County         |    23   |    38   |
+| 39165  |   OH   |         Warren County         |    22   |    38   |
+| 50007  |   VT   |       Chittenden County       |    34   |    38   |
+| 09009  |   CT   |        New Haven County       |    29   |    36   |
+| 26049  |   MI   |         Genesee County        |    26   |    36   |
+| 39057  |   OH   |         Greene County         |    27   |    36   |
+| 06033  |   CA   |          Lake County          |    24   |    35   |
+| 27003  |   MN   |          Anoka County         |    26   |    35   |
+| 51153  |   VA   |     Prince William County     |    29   |    35   |
+| 22115  |   LA   |         Vernon Parish         |    21   |    34   |
+| 29047  |   MO   |          Clay County          |    21   |    34   |
+| 36085  |   NY   |        Richmond County        |    13   |    34   |
+| 51650  |   VA   |          Hampton city         |    20   |    34   |
+| 17093  |   IL   |         Kendall County        |    22   |    33   |
+| 24021  |   MD   |        Frederick County       |    27   |    33   |
+| 29510  |   MO   |         St. Louis city        |    22   |    33   |
+| 36091  |   NY   |        Saratoga County        |    30   |    33   |
+| 39061  |   OH   |        Hamilton County        |    31   |    33   |
+| 42079  |   PA   |         Luzerne County        |    21   |    33   |
+| 17201  |   IL   |        Winnebago County       |    25   |    32   |
+| 22051  |   LA   |        Jefferson Parish       |    16   |    31   |
+| 34021  |   NJ   |         Mercer County         |    29   |    31   |
+| 42011  |   PA   |          Berks County         |    26   |    31   |
+| 42129  |   PA   |      Westmoreland County      |    23   |    31   |
+| 44003  |   RI   |          Kent County          |    21   |    31   |
+| 08067  |   CO   |        La Plata County        |    22   |    30   |
+| 25009  |   MA   |          Essex County         |    43   |    30   |
+| 36029  |   NY   |          Erie County          |    38   |    30   |
+| 42043  |   PA   |         Dauphin County        |    25   |    30   |
+| 17119  |   IL   |         Madison County        |    19   |    29   |
+| 20045  |   KS   |         Douglas County        |    21   |    29   |
+| 24025  |   MD   |         Harford County        |    22   |    29   |
+| 25023  |   MA   |        Plymouth County        |    28   |    29   |
+| 42091  |   PA   |       Montgomery County       |    35   |    29   |
+| 25003  |   MA   |        Berkshire County       |    23   |    28   |
+| 25015  |   MA   |        Hampshire County       |    24   |    28   |
+| 51003  |   VA   |        Albemarle County       |    20   |    28   |
+| 51760  |   VA   |         Richmond city         |    11   |    28   |
+| 05119  |   AR   |         Pulaski County        |    18   |    27   |
+| 10003  |   DE   |       New Castle County       |    20   |    27   |
+| 25027  |   MA   |        Worcester County       |    26   |    27   |
+| 17167  |   IL   |        Sangamon County        |    20   |    26   |
+| 34029  |   NJ   |          Ocean County         |    23   |    26   |
+| 42133  |   PA   |          York County          |    20   |    26   |
+| 26161  |   MI   |        Washtenaw County       |    33   |    25   |
+| 27163  |   MN   |       Washington County       |    15   |    25   |
+| 39151  |   OH   |          Stark County         |    21   |    25   |
+| 33015  |   NH   |       Rockingham County       |    15   |    23   |
+| 42029  |   PA   |         Chester County        |    31   |    23   |
+| 26065  |   MI   |         Ingham County         |    12   |    22   |
+| 36087  |   NY   |        Rockland County        |    23   |    22   |
+| 24510  |   MD   |         Baltimore city        |    20   |    20   |
+| 39113  |   OH   |       Montgomery County       |    15   |    20   |
+| 55079  |   WI   |        Milwaukee County       |    47   |    20   |
+| 06101  |   CA   |         Sutter County         |    16   |    19   |
+| 18003  |   IN   |          Allen County         |    12   |    19   |
+| 34007  |   NJ   |         Camden County         |    24   |    19   |
+| 36055  |   NY   |         Monroe County         |    27   |    19   |
+| 12021  |   FL   |         Collier County        |    17   |    18   |
+| 04019  |   AZ   |          Pima County          |    22   |    16   |
+| 09011  |   CT   |       New London County       |    13   |    15   |
+| 12011  |   FL   |         Broward County        |    23   |    15   |
+| 25005  |   MA   |         Bristol County        |    20   |    15   |
+| 28047  |   MS   |        Harrison County        |    -1   |    15   |
+| 12001  |   FL   |         Alachua County        |    14   |    14   |
+| 12097  |   FL   |         Osceola County        |    16   |    14   |
+| 18105  |   IN   |         Monroe County         |    11   |    14   |
+| 12071  |   FL   |           Lee County          |    6    |    13   |
+| 36071  |   NY   |         Orange County         |    21   |    13   |
+| 12117  |   FL   |        Seminole County        |    22   |    12   |
+| 36067  |   NY   |        Onondaga County        |    15   |    12   |
+| 01073  |   AL   |        Jefferson County       |    15   |    11   |
+| 12086  |   FL   |       Miami-Dade County       |   103   |    11   |
+| 17089  |   IL   |          Kane County          |    23   |    11   |
+| 18089  |   IN   |          Lake County          |    17   |    11   |
+| 34031  |   NJ   |         Passaic County        |    10   |    11   |
+| 51013  |   VA   |        Arlington County       |    -4   |    10   |
+| 12111  |   FL   |        St. Lucie County       |    8    |    9    |
+| 13151  |   GA   |          Henry County         |    8    |    9    |
+| 17197  |   IL   |          Will County          |    29   |    9    |
+| 33011  |   NH   |      Hillsborough County      |    14   |    9    |
+| 06053  |   CA   |        Monterey County        |    10   |    8    |
+| 36027  |   NY   |        Dutchess County        |    7    |    8    |
+| 13063  |   GA   |         Clayton County        |    11   |    7    |
+| 17019  |   IL   |        Champaign County       |    10   |    7    |
+| 06051  |   CA   |          Mono County          |    -5   |    6    |
+| 12073  |   FL   |          Leon County          |    16   |    6    |
+| 18141  |   IN   |       St. Joseph County       |    5    |    6    |
+| 55025  |   WI   |          Dane County          |    11   |    5    |
+| 24027  |   MD   |         Howard County         |    23   |    4    |
+| 25001  |   MA   |       Barnstable County       |    6    |    4    |
+| 27037  |   MN   |         Dakota County         |    21   |    4    |
+| 36111  |   NY   |         Ulster County         |    1    |    4    |
+| 42077  |   PA   |         Lehigh County         |    9    |    4    |
+| 51087  |   VA   |         Henrico County        |    6    |    4    |
+| 22033  |   LA   |    East Baton Rouge Parish    |    -3   |    3    |
+| 51510  |   VA   |        Alexandria city        |    3    |    3    |
+| 12033  |   FL   |        Escambia County        |    9    |    2    |
+| 12127  |   FL   |         Volusia County        |    2    |    2    |
+| 18157  |   IN   |       Tippecanoe County       |    11   |    2    |
+| 47093  |   TN   |          Knox County          |    6    |    2    |
+| 51710  |   VA   |          Norfolk city         |    0    |    2    |
+| 13059  |   GA   |         Clarke County         |    6    |    1    |
+| 23005  |   ME   |       Cumberland County       |    1    |    1    |
+| 39153  |   OH   |         Summit County         |    8    |    1    |
+| 42027  |   PA   |         Centre County         |    2    |    1    |
+| 13121  |   GA   |         Fulton County         |    23   |    0    |
+| 36109  |   NY   |        Tompkins County        |    -2   |    0    |
+| 51041  |   VA   |      Chesterfield County      |    3    |    0    |
+| 51107  |   VA   |         Loudoun County        |    12   |    -1   |
+| 35001  |   NM   |       Bernalillo County       |    9    |    -2   |
+| 42071  |   PA   |        Lancaster County       |    12   |    -2   |
+| 01089  |   AL   |         Madison County        |    8    |    -3   |
+| 20161  |   KS   |          Riley County         |    1    |    -3   |
+| 29183  |   MO   |       St. Charles County      |    3    |    -3   |
+| 37135  |   NC   |         Orange County         |    1    |    -3   |
+| 15009  |   HI   |          Maui County          |   -12   |    -4   |
+| 22017  |   LA   |          Caddo Parish         |    0    |    -4   |
+| 29077  |   MO   |         Greene County         |    1    |    -4   |
+| 36001  |   NY   |         Albany County         |    -1   |    -4   |
+| 37129  |   NC   |       New Hanover County      |    1    |    -5   |
+| 45045  |   SC   |       Greenville County       |    7    |    -5   |
+| 12069  |   FL   |          Lake County          |    -5   |    -7   |
+| 45019  |   SC   |       Charleston County       |    -4   |    -7   |
+| 21067  |   KY   |         Fayette County        |    5    |    -8   |
+| 26081  |   MI   |          Kent County          |    7    |    -8   |
+| 04003  |   AZ   |         Cochise County        |    -4   |    -9   |
+| 08077  |   CO   |          Mesa County          |    -3   |    -9   |
+| 12109  |   FL   |        St. Johns County       |    8    |    -9   |
+| 37051  |   NC   |       Cumberland County       |   -12   |    -9   |
+| 02090  |   AK   |  Fairbanks North Star Borough |    -4   |   -10   |
+| 12091  |   FL   |        Okaloosa County        |   -11   |   -10   |
+| 21111  |   KY   |        Jefferson County       |    17   |   -10   |
+| 29019  |   MO   |          Boone County         |    1    |   -10   |
+| 42095  |   PA   |       Northampton County      |    0    |   -10   |
+| 48423  |   TX   |          Smith County         |    3    |   -10   |
+| 12115  |   FL   |        Sarasota County        |    1    |   -11   |
+| 40143  |   OK   |          Tulsa County         |    -3   |   -11   |
+| 45013  |   SC   |        Beaufort County        |   -11   |   -11   |
+| 47125  |   TN   |       Montgomery County       |    -9   |   -11   |
+| 05143  |   AR   |       Washington County       |    3    |   -12   |
+| 06027  |   CA   |          Inyo County          |   -10   |   -12   |
+| 06031  |   CA   |          Kings County         |    0    |   -12   |
+| 06045  |   CA   |        Mendocino County       |    -9   |   -12   |
+| 13179  |   GA   |         Liberty County        |    -4   |   -12   |
+| 22103  |   LA   |       St. Tammany Parish      |    -7   |   -12   |
+| 12105  |   FL   |          Polk County          |    -3   |   -13   |
+| 19153  |   IA   |          Polk County          |    -5   |   -13   |
+| 22055  |   LA   |        Lafayette Parish       |    -5   |   -13   |
+| 37063  |   NC   |         Durham County         |    -9   |   -13   |
+| 01097  |   AL   |         Mobile County         |    0    |   -14   |
+| 48355  |   TX   |         Nueces County         |    -1   |   -14   |
+| 13051  |   GA   |         Chatham County        |    -3   |   -15   |
+| 29095  |   MO   |         Jackson County        |    6    |   -15   |
+| 40027  |   OK   |        Cleveland County       |    -8   |   -16   |
+| 47065  |   TN   |        Hamilton County        |    -1   |   -17   |
+| 37119  |   NC   |       Mecklenburg County      |    1    |   -18   |
+| 48309  |   TX   |        McLennan County        |    -3   |   -19   |
+| 06023  |   CA   |        Humboldt County        |   -14   |   -20   |
+| 12099  |   FL   |       Palm Beach County       |    35   |   -20   |
+| 02020  |   AK   |     Anchorage Municipality    |   -15   |   -21   |
+| 48303  |   TX   |         Lubbock County        |   -11   |   -22   |
+| 20091  |   KS   |         Johnson County        |    10   |   -24   |
+| 18057  |   IN   |        Hamilton County        |    1    |   -25   |
+| 37021  |   NC   |        Buncombe County        |   -11   |   -25   |
+| 38101  |   ND   |          Ward County          |   -10   |   -25   |
+| 48209  |   TX   |          Hays County          |    -9   |   -25   |
+| 06109  |   CA   |        Tuolumne County        |    -7   |   -26   |
+| 37067  |   NC   |         Forsyth County        |    -9   |   -26   |
+| 06043  |   CA   |        Mariposa County        |   -20   |   -27   |
+| 15007  |   HI   |          Kauai County         |   -14   |   -27   |
+| 48215  |   TX   |         Hidalgo County        |    -3   |   -27   |
+| 47149  |   TN   |       Rutherford County       |   -13   |   -28   |
+| 12113  |   FL   |       Santa Rosa County       |   -20   |   -29   |
+| 36045  |   NY   |        Jefferson County       |   -13   |   -29   |
+| 41019  |   OR   |         Douglas County        |   -21   |   -29   |
+| 15001  |   HI   |         Hawaii County         |   -21   |   -30   |
+| 35049  |   NM   |        Santa Fe County        |   -20   |   -30   |
+| 06039  |   CA   |         Madera County         |   -13   |   -31   |
+| 08014  |   CO   |       Broomfield County       |   -24   |   -31   |
+| 22071  |   LA   |         Orleans Parish        |   -27   |   -33   |
+| 46103  |   SD   |       Pennington County       |   -21   |   -33   |
+| 48329  |   TX   |         Midland County        |   -19   |   -33   |
+| 48479  |   TX   |          Webb County          |   -23   |   -33   |
+| 48485  |   TX   |         Wichita County        |   -21   |   -33   |
+| 08101  |   CO   |         Pueblo County         |   -20   |   -34   |
+| 06015  |   CA   |        Del Norte County       |   -22   |   -35   |
+| 06057  |   CA   |         Nevada County         |    -5   |   -35   |
+| 08097  |   CO   |         Pitkin County         |   -20   |   -35   |
+| 12085  |   FL   |         Martin County         |   -23   |   -35   |
+| 16027  |   ID   |         Canyon County         |   -23   |   -35   |
+| 41003  |   OR   |         Benton County         |   -29   |   -35   |
+| 41033  |   OR   |        Josephine County       |   -21   |   -35   |
+| 55009  |   WI   |          Brown County         |   -21   |   -35   |
+| 21047  |   KY   |        Christian County       |   -21   |   -36   |
+| 30111  |   MT   |       Yellowstone County      |   -23   |   -37   |
+| 39049  |   OH   |        Franklin County        |    21   |   -37   |
+| 48187  |   TX   |        Guadalupe County       |   -20   |   -37   |
+| 04027  |   AZ   |          Yuma County          |    -3   |   -38   |
+| 05007  |   AR   |         Benton County         |   -20   |   -38   |
+| 06017  |   CA   |        El Dorado County       |   -21   |   -38   |
+| 31109  |   NE   |        Lancaster County       |    -9   |   -38   |
+| 48141  |   TX   |         El Paso County        |    3    |   -38   |
+| 53005  |   WA   |         Benton County         |    -9   |   -38   |
+| 53015  |   WA   |         Cowlitz County        |   -27   |   -38   |
+| 47187  |   TN   |       Williamson County       |    -9   |   -39   |
+| 57003  |   FR   |     Foreign - Puerto Rico     |   -15   |   -39   |
+| 13113  |   GA   |         Fayette County        |   -24   |   -40   |
+| 30031  |   MT   |        Gallatin County        |   -26   |   -40   |
+| 41011  |   OR   |          Coos County          |   -21   |   -40   |
+| 41043  |   OR   |          Linn County          |   -25   |   -40   |
+| 06093  |   CA   |        Siskiyou County        |   -21   |   -41   |
+| 06113  |   CA   |          Yolo County          |   -16   |   -41   |
+| 12061  |   FL   |      Indian River County      |   -23   |   -41   |
+| 13215  |   GA   |        Muscogee County        |   -21   |   -41   |
+| 37097  |   NC   |         Iredell County        |   -21   |   -41   |
+| 12019  |   FL   |          Clay County          |   -25   |   -42   |
+| 32510  |   NV   |          Carson City          |   -16   |   -42   |
+| 38105  |   ND   |        Williams County        |   -23   |   -42   |
+| 48039  |   TX   |        Brazoria County        |   -17   |   -42   |
+| 45015  |   SC   |        Berkeley County        |   -27   |   -43   |
+| 48245  |   TX   |        Jefferson County       |   -22   |   -43   |
+| 49021  |   UT   |          Iron County          |   -22   |   -43   |
+| 28049  |   MS   |          Hinds County         |   -24   |   -44   |
+| 35043  |   NM   |        Sandoval County        |   -20   |   -44   |
+| 06087  |   CA   |       Santa Cruz County       |   -18   |   -45   |
+| 06103  |   CA   |         Tehama County         |   -23   |   -45   |
+| 12081  |   FL   |         Manatee County        |    -9   |   -45   |
+| 13077  |   GA   |         Coweta County         |   -20   |   -45   |
+| 53009  |   WA   |         Clallam County        |   -28   |   -45   |
+| 13097  |   GA   |         Douglas County        |   -25   |   -46   |
+| 32005  |   NV   |         Douglas County        |   -26   |   -46   |
+| 49057  |   UT   |          Weber County         |   -23   |   -46   |
+| 20061  |   KS   |          Geary County         |   -17   |   -47   |
+| 48061  |   TX   |         Cameron County        |   -24   |   -47   |
+| 37183  |   NC   |          Wake County          |    -7   |   -49   |
+| 48091  |   TX   |          Comal County         |   -29   |   -49   |
+| 48441  |   TX   |         Taylor County         |   -23   |   -49   |
+| 53007  |   WA   |         Chelan County         |   -22   |   -49   |
+| 41071  |   OR   |         Yamhill County        |   -26   |   -50   |
+| 48167  |   TX   |        Galveston County       |   -17   |   -50   |
+| 49011  |   UT   |          Davis County         |   -15   |   -50   |
+| 32019  |   NV   |          Lyon County          |   -26   |   -51   |
+| 46099  |   SD   |        Minnehaha County       |   -25   |   -51   |
+| 06089  |   CA   |         Shasta County         |   -19   |   -52   |
+| 13117  |   GA   |         Forsyth County        |   -22   |   -52   |
+| 53067  |   WA   |        Thurston County        |   -29   |   -52   |
+| 08037  |   CO   |          Eagle County         |   -21   |   -53   |
+| 12095  |   FL   |         Orange County         |    0    |   -53   |
+| 19103  |   IA   |         Johnson County        |   -29   |   -53   |
+| 30063  |   MT   |        Missoula County        |   -35   |   -53   |
+| 37081  |   NC   |        Guilford County        |   -11   |   -53   |
+| 06075  |   CA   |      San Francisco County     |   -121  |   -54   |
+| 13057  |   GA   |        Cherokee County        |   -23   |   -54   |
+| 16083  |   ID   |       Twin Falls County       |   -22   |   -55   |
+| 05131  |   AR   |        Sebastian County       |   -27   |   -56   |
+| 32023  |   NV   |           Nye County          |   -31   |   -57   |
+| 40031  |   OK   |        Comanche County        |   -25   |   -57   |
+| 48041  |   TX   |         Brazos County         |   -31   |   -57   |
+| 53073  |   WA   |         Whatcom County        |   -19   |   -57   |
+| 08123  |   CO   |          Weld County          |   -25   |   -58   |
+| 49005  |   UT   |          Cache County         |   -27   |   -58   |
+| 51810  |   VA   |      Virginia Beach city      |   -26   |   -58   |
+| 53021  |   WA   |        Franklin County        |   -25   |   -59   |
+| 57009  |   FR   |     Foreign - Other flows     |   -31   |   -59   |
+| 08045  |   CO   |        Garfield County        |   -26   |   -60   |
+| 12009  |   FL   |         Brevard County        |   -28   |   -60   |
+| 12103  |   FL   |        Pinellas County        |   -23   |   -60   |
+| 20173  |   KS   |        Sedgwick County        |   -24   |   -60   |
+| 53057  |   WA   |         Skagit County         |   -31   |   -61   |
+| 06055  |   CA   |          Napa County          |   -40   |   -62   |
+| 48157  |   TX   |        Fort Bend County       |    -6   |   -62   |
+| 49043  |   UT   |         Summit County         |   -31   |   -62   |
+| 31055  |   NE   |         Douglas County        |   -13   |   -64   |
+| 48135  |   TX   |          Ector County         |   -31   |   -64   |
+| 49053  |   UT   |       Washington County       |   -36   |   -64   |
+| 06061  |   CA   |         Placer County         |   -29   |   -66   |
+| 13067  |   GA   |          Cobb County          |   -31   |   -66   |
+| 06047  |   CA   |         Merced County         |   -10   |   -69   |
+| 20209  |   KS   |        Wyandotte County       |   -29   |   -69   |
+| 13089  |   GA   |         DeKalb County         |   -18   |   -70   |
+| 06025  |   CA   |        Imperial County        |   -16   |   -71   |
+| 08001  |   CO   |          Adams County         |   -30   |   -71   |
+| 53077  |   WA   |         Yakima County         |   -14   |   -71   |
+| 08013  |   CO   |         Boulder County        |   -24   |   -74   |
+| 12101  |   FL   |          Pasco County         |   -15   |   -75   |
+| 53061  |   WA   |        Snohomish County       |   -56   |   -75   |
+| 58000  |   SS   |    Other flows - Same State   |   -23   |   -76   |
+| 15003  |   HI   |        Honolulu County        |   -38   |   -77   |
+| 04005  |   AZ   |        Coconino County        |   -41   |   -80   |
+| 06007  |   CA   |          Butte County         |   -42   |   -82   |
+| 48339  |   TX   |       Montgomery County       |   -41   |   -82   |
+| 13135  |   GA   |        Gwinnett County        |   -21   |   -84   |
+| 53063  |   WA   |         Spokane County        |   -28   |   -84   |
+| 06019  |   CA   |         Fresno County         |    19   |   -86   |
+| 08069  |   CO   |         Larimer County        |   -48   |   -87   |
+| 16055  |   ID   |        Kootenai County        |   -36   |   -88   |
+| 06095  |   CA   |         Solano County         |   -25   |   -91   |
+| 08031  |   CO   |         Denver County         |   -61   |   -91   |
+| 08059  |   CO   |        Jefferson County       |   -46   |   -94   |
+| 08035  |   CO   |         Douglas County        |   -44   |   -96   |
+| 41047  |   OR   |         Marion County         |   -41   |   -97   |
+| 47037  |   TN   |        Davidson County        |   -43   |   -97   |
+| 06099  |   CA   |       Stanislaus County       |   -16   |   -98   |
+| 06077  |   CA   |       San Joaquin County      |   -22   |   -102  |
+| 53029  |   WA   |         Island County         |   -51   |   -102  |
+| 08041  |   CO   |         El Paso County        |   -53   |   -111  |
+| 04021  |   AZ   |          Pinal County         |   -56   |   -112  |
+| 12031  |   FL   |          Duval County         |   -46   |   -112  |
+| 41017  |   OR   |        Deschutes County       |   -73   |   -114  |
+| 49049  |   UT   |          Utah County          |   -38   |   -114  |
+| 41029  |   OR   |         Jackson County        |   -66   |   -118  |
+| 06081  |   CA   |        San Mateo County       |   -83   |   -120  |
+| 41039  |   OR   |          Lane County          |   -59   |   -120  |
+| 48027  |   TX   |          Bell County          |   -47   |   -121  |
+| 06083  |   CA   |      Santa Barbara County     |    -7   |   -123  |
+| 53035  |   WA   |         Kitsap County         |   -84   |   -124  |
+| 06041  |   CA   |          Marin County         |   -38   |   -133  |
+| 06097  |   CA   |         Sonoma County         |   -64   |   -150  |
+| 16001  |   ID   |           Ada County          |   -79   |   -150  |
+| 40109  |   OK   |        Oklahoma County        |   -57   |   -156  |
+| 08005  |   CO   |        Arapahoe County        |   -72   |   -161  |
+| 04025  |   AZ   |         Yavapai County        |   -72   |   -162  |
+| 06013  |   CA   |      Contra Costa County      |   -40   |   -164  |
+| 48121  |   TX   |         Denton County         |   -65   |   -166  |
+| 41005  |   OR   |        Clackamas County       |   -76   |   -168  |
+| 53011  |   WA   |          Clark County         |   -70   |   -171  |
+| 12057  |   FL   |      Hillsborough County      |   -28   |   -175  |
+| 53053  |   WA   |         Pierce County         |   -96   |   -207  |
+| 32031  |   NV   |         Washoe County         |   -93   |   -224  |
+| 41067  |   OR   |       Washington County       |   -106  |   -226  |
+| 49035  |   UT   |        Salt Lake County       |   -84   |   -226  |
+| 48491  |   TX   |       Williamson County       |   -110  |   -236  |
+| 04015  |   AZ   |         Mohave County         |   -134  |   -241  |
+| 48085  |   TX   |         Collin County         |   -77   |   -257  |
+| 06079  |   CA   |     San Luis Obispo County    |   -141  |   -264  |
+| 48029  |   TX   |          Bexar County         |   -113  |   -265  |
+| 06107  |   CA   |         Tulare County         |   -72   |   -311  |
+| 48439  |   TX   |         Tarrant County        |   -124  |   -352  |
+| 48113  |   TX   |         Dallas County         |   -137  |   -365  |
+| 41051  |   OR   |        Multnomah County       |   -271  |   -400  |
+| 06001  |   CA   |         Alameda County        |   -228  |   -402  |
+| 53033  |   WA   |          King County          |   -216  |   -438  |
+| 06067  |   CA   |       Sacramento County       |   -131  |   -458  |
+| 06085  |   CA   |       Santa Clara County      |   -231  |   -555  |
+| 48201  |   TX   |         Harris County         |   -319  |   -780  |
+| 59000  |   DS   | Other flows - Different State |   237   |   -822  |
+| 06029  |   CA   |          Kern County          |   -452  |  -1141  |
+| 04013  |   AZ   |        Maricopa County        |   -403  |  -1235  |
+| 57001  |   FR   |       Foreign - Overseas      |   -954  |  -1513  |
+| 06073  |   CA   |        San Diego County       |   -682  |  -1595  |
+| 06111  |   CA   |         Ventura County        |   -702  |  -1727  |
+| 06059  |   CA   |         Orange County         |  -1912  |  -4827  |
+| 32003  |   NV   |          Clark County         |  -2300  |  -4970  |
+| 06065  |   CA   |        Riverside County       |  -2031  |  -5518  |
+| 06071  |   CA   |     San Bernardino County     |  -4156  |  -11047 |
++--------+--------+-------------------------------+---------+---------+

@@ -1,0 +1,265 @@
+NYC Out Migration
+outflow_2013_14
++-------------+---------------+-------------------------------+---------+---------+
+| destination | st_dest_abbrv |          co_dest_name         | returns | exempts |
++-------------+---------------+-------------------------------+---------+---------+
+|    59000    |       DS      | Other flows - Different State |  14420  |  25405  |
+|    36059    |       NY      |         Nassau County         |  12467  |  25204  |
+|    36119    |       NY      |       Westchester County      |   8980  |  17173  |
+|    36103    |       NY      |         Suffolk County        |   5160  |   9271  |
+|    34017    |       NJ      |         Hudson County         |   5601  |   8818  |
+|    34003    |       NJ      |         Bergen County         |   3762  |   7124  |
+|    06037    |       CA      |       Los Angeles County      |   4775  |   6395  |
+|    57001    |       FR      |       Foreign - Overseas      |   3593  |   6155  |
+|    34013    |       NJ      |          Essex County         |   2874  |   5819  |
+|    09001    |       CT      |        Fairfield County       |   2959  |   5566  |
+|    48453    |       TX      |         Travis County         |   2325  |   4267  |
+|    34023    |       NJ      |        Middlesex County       |   2132  |   4229  |
+|    12011    |       FL      |         Broward County        |   2040  |   3525  |
+|    12086    |       FL      |       Miami-Dade County       |   2195  |   3483  |
+|    36071    |       NY      |         Orange County         |   1612  |   3255  |
+|    42101    |       PA      |      Philadelphia County      |   1834  |   3071  |
+|    34025    |       NJ      |        Monmouth County        |   1488  |   2833  |
+|    12095    |       FL      |         Orange County         |   1365  |   2770  |
+|    36087    |       NY      |        Rockland County        |   1252  |   2762  |
+|    34039    |       NJ      |          Union County         |   1352  |   2729  |
+|    12099    |       FL      |       Palm Beach County       |   1614  |   2649  |
+|    17031    |       IL      |          Cook County          |   1827  |   2558  |
+|    06075    |       CA      |      San Francisco County     |   2086  |   2548  |
+|    48201    |       TX      |         Harris County         |   1233  |   2288  |
+|    09009    |       CT      |        New Haven County       |   1079  |   1950  |
+|    34031    |       NJ      |         Passaic County        |   930   |   1860  |
+|    42089    |       PA      |         Monroe County         |   764   |   1741  |
+|    37119    |       NC      |       Mecklenburg County      |   878   |   1631  |
+|    36027    |       NY      |        Dutchess County        |   876   |   1603  |
+|    25017    |       MA      |        Middlesex County       |   1148  |   1595  |
+|    58000    |       SS      |    Other flows - Same State   |   925   |   1577  |
+|    12057    |       FL      |      Hillsborough County      |   809   |   1545  |
+|    11001    |       DC      |      District of Columbia     |   1218  |   1543  |
+|    25025    |       MA      |         Suffolk County        |   1081  |   1416  |
+|    24031    |       MD      |       Montgomery County       |   812   |   1370  |
+|    53033    |       WA      |          King County          |   930   |   1366  |
+|    34029    |       NJ      |          Ocean County         |   667   |   1362  |
+|    13121    |       GA      |         Fulton County         |   778   |   1306  |
+|    42077    |       PA      |         Lehigh County         |   597   |   1306  |
+|    34027    |       NJ      |         Morris County         |   754   |   1249  |
+|    12097    |       FL      |         Osceola County        |   573   |   1232  |
+|    06073    |       CA      |        San Diego County       |   827   |   1223  |
+|    09003    |       CT      |        Hartford County        |   651   |   1208  |
+|    13135    |       GA      |        Gwinnett County        |   573   |   1164  |
+|    06001    |       CA      |         Alameda County        |   814   |   1142  |
+|    37183    |       NC      |          Wake County          |   553   |   1077  |
+|    48113    |       TX      |         Dallas County         |   652   |   1071  |
+|    24510    |       MD      |         Baltimore city        |   597   |   1032  |
+|    06085    |       CA      |       Santa Clara County      |   685   |   1018  |
+|    13089    |       GA      |         DeKalb County         |   572   |   1016  |
+|    04013    |       AZ      |        Maricopa County        |   622   |   997   |
+|    36029    |       NY      |          Erie County          |   502   |   991   |
+|    24033    |       MD      |     Prince George's County    |   529   |   974   |
+|    42079    |       PA      |         Luzerne County        |   453   |   967   |
+|    36001    |       NY      |         Albany County         |   550   |   909   |
+|    51059    |       VA      |         Fairfax County        |   535   |   891   |
+|    24005    |       MD      |        Baltimore County       |   466   |   887   |
+|    34021    |       NJ      |         Mercer County         |   507   |   885   |
+|    32003    |       NV      |          Clark County         |   547   |   851   |
+|    36079    |       NY      |         Putnam County         |   462   |   849   |
+|    06059    |       CA      |         Orange County         |   554   |   848   |
+|    44007    |       RI      |       Providence County       |   459   |   843   |
+|    36111    |       NY      |         Ulster County         |   514   |   833   |
+|    57003    |       FR      |     Foreign - Puerto Rico     |   449   |   810   |
+|    42011    |       PA      |          Berks County         |   334   |   751   |
+|    42095    |       PA      |       Northampton County      |   354   |   751   |
+|    39049    |       OH      |        Franklin County        |   424   |   737   |
+|    34035    |       NJ      |        Somerset County        |   442   |   721   |
+|    13067    |       GA      |          Cobb County          |   361   |   708   |
+|    25009    |       MA      |          Essex County         |   382   |   679   |
+|    42091    |       PA      |       Montgomery County       |   386   |   665   |
+|    12103    |       FL      |        Pinellas County        |   389   |   656   |
+|    12071    |       FL      |           Lee County          |   350   |   638   |
+|    36055    |       NY      |         Monroe County         |   378   |   633   |
+|    12105    |       FL      |          Polk County          |   281   |   623   |
+|    36007    |       NY      |         Broome County         |   287   |   612   |
+|    25021    |       MA      |         Norfolk County        |   382   |   609   |
+|    10003    |       DE      |       New Castle County       |   328   |   587   |
+|    42003    |       PA      |        Allegheny County       |   372   |   579   |
+|    41051    |       OR      |        Multnomah County       |   426   |   562   |
+|    36093    |       NY      |       Schenectady County      |   273   |   555   |
+|    08031    |       CO      |         Denver County         |   409   |   545   |
+|    36105    |       NY      |        Sullivan County        |   279   |   541   |
+|    12031    |       FL      |          Duval County         |   314   |   539   |
+|    39035    |       OH      |        Cuyahoga County        |   312   |   524   |
+|    12117    |       FL      |        Seminole County        |   282   |   520   |
+|    06081    |       CA      |        San Mateo County       |   332   |   494   |
+|    26163    |       MI      |          Wayne County         |   235   |   492   |
+|    27053    |       MN      |        Hennepin County        |   322   |   490   |
+|    48439    |       TX      |         Tarrant County        |   265   |   478   |
+|    36067    |       NY      |        Onondaga County        |   281   |   466   |
+|    42045    |       PA      |        Delaware County        |   245   |   465   |
+|    42017    |       PA      |          Bucks County         |   279   |   457   |
+|    25027    |       MA      |        Worcester County       |   249   |   455   |
+|    57005    |       FR      |     Foreign - APO/FPO ZIPs    |   271   |   453   |
+|    34005    |       NJ      |       Burlington County       |   231   |   439   |
+|    12127    |       FL      |         Volusia County        |   225   |   437   |
+|    34007    |       NJ      |         Camden County         |   246   |   436   |
+|    51810    |       VA      |      Virginia Beach city      |   227   |   424   |
+|    48029    |       TX      |          Bexar County         |   241   |   418   |
+|    47037    |       TN      |        Davidson County        |   268   |   411   |
+|    12009    |       FL      |         Brevard County        |   233   |   402   |
+|    42103    |       PA      |          Pike County          |   198   |   390   |
+|    48085    |       TX      |         Collin County         |   181   |   390   |
+|    25013    |       MA      |         Hampden County        |   198   |   385   |
+|    12111    |       FL      |        St. Lucie County       |   209   |   384   |
+|    15003    |       HI      |        Honolulu County        |   242   |   380   |
+|    09011    |       CT      |       New London County       |   212   |   366   |
+|    37063    |       NC      |         Durham County         |   235   |   364   |
+|    51013    |       VA      |        Arlington County       |   258   |   357   |
+|    12069    |       FL      |          Lake County          |   175   |   356   |
+|    37051    |       NC      |       Cumberland County       |   175   |   356   |
+|    09005    |       CT      |       Litchfield County       |   193   |   350   |
+|    06013    |       CA      |      Contra Costa County      |   218   |   344   |
+|    13063    |       GA      |         Clayton County        |   168   |   340   |
+|    12115    |       FL      |        Sarasota County        |   212   |   336   |
+|    12101    |       FL      |          Pasco County         |   174   |   334   |
+|    45019    |       SC      |       Charleston County       |   207   |   334   |
+|    39061    |       OH      |        Hamilton County        |   198   |   328   |
+|    22071    |       LA      |         Orleans Parish        |   249   |   325   |
+|    37081    |       NC      |        Guilford County        |   164   |   325   |
+|    42071    |       PA      |        Lancaster County       |   161   |   312   |
+|    42043    |       PA      |         Dauphin County        |   153   |   311   |
+|    26125    |       MI      |         Oakland County        |   205   |   307   |
+|    51760    |       VA      |         Richmond city         |   173   |   305   |
+|    51710    |       VA      |          Norfolk city         |   172   |   302   |
+|    48157    |       TX      |        Fort Bend County       |   144   |   300   |
+|    12021    |       FL      |         Collier County        |   183   |   296   |
+|    36021    |       NY      |        Columbia County        |   197   |   296   |
+|    12083    |       FL      |         Marion County         |   151   |   290   |
+|    34001    |       NJ      |        Atlantic County        |   159   |   289   |
+|    51087    |       VA      |         Henrico County        |   157   |   287   |
+|    42069    |       PA      |       Lackawanna County       |   138   |   282   |
+|    36083    |       NY      |       Rensselaer County       |   141   |   278   |
+|    42029    |       PA      |         Chester County        |   146   |   271   |
+|    06065    |       CA      |        Riverside County       |   170   |   267   |
+|    51153    |       VA      |     Prince William County     |   140   |   267   |
+|    24027    |       MD      |         Howard County         |   139   |   259   |
+|    36065    |       NY      |         Oneida County         |   128   |   258   |
+|    42133    |       PA      |          York County          |   123   |   251   |
+|    18097    |       IN      |         Marion County         |   133   |   249   |
+|    29189    |       MO      |        St. Louis County       |   140   |   244   |
+|    06041    |       CA      |          Marin County         |   154   |   242   |
+|    51041    |       VA      |      Chesterfield County      |   117   |   240   |
+|    08013    |       CO      |         Boulder County        |   157   |   236   |
+|    24003    |       MD      |      Anne Arundel County      |   154   |   236   |
+|    23005    |       ME      |       Cumberland County       |   147   |   234   |
+|    25005    |       MA      |         Bristol County        |   119   |   232   |
+|    45045    |       SC      |       Greenville County       |   113   |   228   |
+|    36091    |       NY      |        Saratoga County        |   155   |   225   |
+|    36109    |       NY      |        Tompkins County        |   166   |   222   |
+|    51510    |       VA      |        Alexandria city        |   145   |   214   |
+|    49035    |       UT      |        Salt Lake County       |   121   |   209   |
+|    51107    |       VA      |         Loudoun County        |   120   |   206   |
+|    06067    |       CA      |       Sacramento County       |   137   |   205   |
+|    08005    |       CO      |        Arapahoe County        |   129   |   203   |
+|    51700    |       VA      |       Newport News city       |    89   |   197   |
+|    22051    |       LA      |        Jefferson Parish       |   114   |   193   |
+|    04019    |       AZ      |          Pima County          |   126   |   186   |
+|    06071    |       CA      |     San Bernardino County     |   119   |   186   |
+|    25001    |       MA      |       Barnstable County       |   150   |   184   |
+|    17043    |       IL      |         DuPage County         |   103   |   179   |
+|    26161    |       MI      |        Washtenaw County       |   132   |   178   |
+|    55079    |       WI      |        Milwaukee County       |   114   |   177   |
+|    33011    |       NH      |      Hillsborough County      |   119   |   174   |
+|    36025    |       NY      |        Delaware County        |    96   |   173   |
+|    36039    |       NY      |         Greene County         |   104   |   171   |
+|    13051    |       GA      |         Chatham County        |    98   |   169   |
+|    25023    |       MA      |        Plymouth County        |   108   |   168   |
+|    37067    |       NC      |         Forsyth County        |    90   |   165   |
+|    48027    |       TX      |          Bell County          |    89   |   165   |
+|    13151    |       GA      |          Henry County         |    81   |   161   |
+|    34037    |       NJ      |         Sussex County         |    93   |   160   |
+|    17097    |       IL      |          Lake County          |    97   |   158   |
+|    25015    |       MA      |        Hampshire County       |    95   |   157   |
+|    12081    |       FL      |         Manatee County        |    94   |   156   |
+|    37133    |       NC      |         Onslow County         |    88   |   153   |
+|    25003    |       MA      |        Berkshire County       |    81   |   149   |
+|    21111    |       KY      |        Jefferson County       |    95   |   148   |
+|    55025    |       WI      |          Dane County          |   107   |   148   |
+|    06111    |       CA      |         Ventura County        |    95   |   143   |
+|    53053    |       WA      |         Pierce County         |    84   |   143   |
+|    09007    |       CT      |        Middlesex County       |    85   |   139   |
+|    08041    |       CO      |         El Paso County        |    83   |   138   |
+|    20091    |       KS      |         Johnson County        |    82   |   137   |
+|    48141    |       TX      |         El Paso County        |    81   |   134   |
+|    40109    |       OK      |        Oklahoma County        |    79   |   130   |
+|    45079    |       SC      |        Richland County        |    62   |   130   |
+|    47157    |       TN      |         Shelby County         |    86   |   130   |
+|    12109    |       FL      |        St. Johns County       |    73   |   128   |
+|    37135    |       NC      |         Orange County         |    84   |   125   |
+|    12053    |       FL      |        Hernando County        |    64   |   124   |
+|    24021    |       MD      |        Frederick County       |    73   |   123   |
+|    45051    |       SC      |          Horry County         |    65   |   122   |
+|    12035    |       FL      |         Flagler County        |    58   |   119   |
+|    01073    |       AL      |        Jefferson County       |    64   |   117   |
+|    51550    |       VA      |        Chesapeake city        |    54   |   117   |
+|    37129    |       NC      |       New Hanover County      |    73   |   115   |
+|    42075    |       PA      |         Lebanon County        |    53   |   115   |
+|    34019    |       NJ      |        Hunterdon County       |    72   |   114   |
+|    13247    |       GA      |        Rockdale County        |    61   |   113   |
+|    50007    |       VT      |       Chittenden County       |    74   |   108   |
+|    48491    |       TX      |       Williamson County       |    70   |   105   |
+|    06083    |       CA      |      Santa Barbara County     |    70   |    97   |
+|    53061    |       WA      |        Snohomish County       |    46   |    95   |
+|    37021    |       NC      |        Buncombe County        |    68   |    94   |
+|    48121    |       TX      |         Denton County         |    57   |    94   |
+|    29095    |       MO      |         Jackson County        |    59   |    92   |
+|    06097    |       CA      |         Sonoma County         |    63   |    90   |
+|    36045    |       NY      |        Jefferson County       |    52   |    90   |
+|    34041    |       NJ      |         Warren County         |    41   |    89   |
+|    26081    |       MI      |          Kent County          |    53   |    87   |
+|    26099    |       MI      |         Macomb County         |    46   |    86   |
+|    10001    |       DE      |          Kent County          |    42   |    85   |
+|    12001    |       FL      |         Alachua County        |    52   |    83   |
+|    35001    |       NM      |       Bernalillo County       |    58   |    79   |
+|    31055    |       NE      |         Douglas County        |    48   |    73   |
+|    33015    |       NH      |       Rockingham County       |    58   |    73   |
+|    51650    |       VA      |          Hampton city         |    27   |    72   |
+|    45015    |       SC      |        Berkeley County        |    40   |    71   |
+|    35049    |       NM      |        Santa Fe County        |    57   |    70   |
+|    06087    |       CA      |       Santa Cruz County       |    50   |    69   |
+|    27123    |       MN      |         Ramsey County         |    49   |    69   |
+|    08059    |       CO      |        Jefferson County       |    53   |    68   |
+|    13217    |       GA      |         Newton County         |    30   |    68   |
+|    29510    |       MO      |         St. Louis city        |    52   |    67   |
+|    34015    |       NJ      |       Gloucester County       |    24   |    64   |
+|    49049    |       UT      |          Utah County          |    24   |    53   |
+|    47125    |       TN      |       Montgomery County       |    24   |    49   |
+|    42127    |       PA      |          Wayne County         |    24   |    48   |
+|    12061    |       FL      |      Indian River County      |    28   |    45   |
+|    45091    |       SC      |          York County          |    20   |    45   |
+|    33009    |       NH      |         Grafton County        |    33   |    44   |
+|    41067    |       OR      |       Washington County       |    29   |    44   |
+|    06019    |       CA      |         Fresno County         |    28   |    43   |
+|    51003    |       VA      |        Albemarle County       |    32   |    43   |
+|    22033    |       LA      |    East Baton Rouge Parish    |    23   |    42   |
+|    24025    |       MD      |         Harford County        |    24   |    42   |
+|    13097    |       GA      |         Douglas County        |    23   |    41   |
+|    42025    |       PA      |         Carbon County         |    21   |    41   |
+|    48339    |       TX      |       Montgomery County       |    21   |    40   |
+|    44009    |       RI      |       Washington County       |    27   |    39   |
+|    47187    |       TN      |       Williamson County       |    23   |    39   |
+|    51179    |       VA      |        Stafford County        |    20   |    39   |
+|    39153    |       OH      |         Summit County         |    23   |    36   |
+|    57009    |       FR      |     Foreign - Other flows     |    25   |    36   |
+|    02020    |       AK      |     Anchorage Municipality    |    21   |    35   |
+|    12073    |       FL      |          Leon County          |    21   |    35   |
+|    12085    |       FL      |         Martin County         |    20   |    35   |
+|    45013    |       SC      |        Beaufort County        |    26   |    35   |
+|    32031    |       NV      |         Washoe County         |    25   |    34   |
+|    23031    |       ME      |          York County          |    24   |    33   |
+|    51540    |       VA      |      Charlottesville city     |    25   |    33   |
+|    08035    |       CO      |         Douglas County        |    21   |    32   |
+|    21067    |       KY      |         Fayette County        |    21   |    31   |
+|    06053    |       CA      |        Monterey County        |    21   |    30   |
+|    40143    |       OK      |          Tulsa County         |    20   |    30   |
+|    22055    |       LA      |        Lafayette Parish       |    20   |    29   |
+|    44005    |       RI      |         Newport County        |    20   |    27   |
++-------------+---------------+-------------------------------+---------+---------+

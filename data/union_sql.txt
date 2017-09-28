@@ -1,0 +1,13 @@
+SELECT county, sum(returns) AS returns, sum(exempt) AS exempt
+FROM (
+SELECT origin AS county, sum(returns) as returns, sum(exemptions) as exempt
+FROM inflow_2014_15
+WHERE destination IN ('36005','36047','36061','36081','36085') AND origin NOT IN ('36005','36047','36061','36081','36085')
+GROUP BY origin
+UNION
+SELECT destination AS county, sum(returns) as returns, sum(exemptions) as exempt
+FROM outflow_2014_15
+WHERE origin IN ('36005','36047','36061','36081','36085') AND destination NOT IN ('36005','36047','36061','36081','36085')
+GROUP BY destination)
+GROUP BY county
+ORDER BY exempt DESC

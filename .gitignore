@@ -1,0 +1,3 @@
+#Ignore articles folder and the database
+literature/
+*.sqlite
