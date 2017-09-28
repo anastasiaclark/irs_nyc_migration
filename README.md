@@ -1,6 +1,6 @@
 # irs_nyc_migration
 
-Project files for the NYC IRS Migration paper. See irsproject_notes.txt for details.
+Project files for the NYC IRS Migration paper. See IRS Project Notes in the wiki for details: https://github.com/anastasiaclark/irs_nyc_migration/wiki/Project-Notes
 
 Paper to be submitted to the WCIB Occasional Papers Series http://zicklin.baruch.cuny.edu/centers/weissman/professionals/publications/occasional-papers-series
 
