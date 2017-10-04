@@ -7,3 +7,5 @@
   maps that could be looked at.
 * Some counties changed fips codes during this 4-year period, 
   if we want to track change in migration over time, we need to deal with this somehow.
+* Is there dictionary for Census pop estimates. Most of the fields are self explanatory, but not all. Don't want to      misinterpret them
+  
