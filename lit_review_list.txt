@@ -4,6 +4,10 @@
 
 - Frey2017: blog post from Brookings that studies a revival in pre-recession patterns of migration.
 
+- Fuller2017: Detailed report using the IRS migration data to study in-out migration in DC. References shortcomings with the most recent data. Referenced by Gregg2017.
+
+- Gregg2017: WP article about millenials leaving DC. References Fuller2017.
+
 - IBO2009: NYC Independent Budget office report that looked at the IRS migration trends for NYC from 1989 to 2007. It showed net-migration was declining, and is much lower than recent numbers.
 
 - KDM2016: Detailed report on using the IRS migration data to study out-migration from Illinois.
