@@ -3,6 +3,8 @@
 * What do we want to show in graphs? Change over time in the top counties/metros that send/recieve migrants from NYC?
 - I think that we initially want to see if the top senders and receivers have consistently remained the same over the four year time period, and if so we can think about showing the total 4-year relative share for inflow, outflow, and net change. Pie / dougnuts for share or bar charts for the top places that show in, out, and net? We can look at the reports from Philly and DC (uploaded the latter today) and the older one from NYC to see how they presented it. Ultimately I think tables will be the most important - we'll have to decide whether to show top 10, 12, or 20 places, and at the county level if we want to break out NYC metro counties from non-metros.
 
+Some examples: Fuller2017 paper for DC, Figure 1 for graphing census population estimates (which we should do too), can also do a similar figure but for showing total IRS inflows, outflows, and net by year, Figures 11 and 12 for net receivers and senders. Pew2010 and Pew2016 papers for Philly, for tables at city-level breaking out suburban counties from cities across the country, dougnuts maybe for illustrating share.
+
 * Do we want to make flow maps or something else? 
   I did circular plots like in [this paper](http://www.global-migration.info/VID%20WP%20Visualising%20Migration%20Flow%20Data%20with%20Circular%20Plots.pdf) for Deborah's migration in Mexico paper. 
   But, I used R scrips described in the paper. So maybe not something you'd want but the paper has other tradtional flow
