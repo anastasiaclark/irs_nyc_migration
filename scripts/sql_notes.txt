@@ -1,0 +1,30 @@
+--Union inflow and outflow to calculate net flow
+SELECT county, sum(returns) AS returns, sum(exempt) AS exempt
+FROM (
+SELECT origin AS county, sum(returns) as returns, sum(exemptions) as exempt
+FROM inflow_2014_15
+WHERE destination IN ('36005','36047','36061','36081','36085') AND origin NOT IN ('36005','36047','36061','36081','36085')
+GROUP BY origin
+UNION
+SELECT destination AS county, sum(returns)*-1 as returns, sum(exemptions)*-1 as exempt
+FROM outflow_2014_15
+WHERE origin IN ('36005','36047','36061','36081','36085') AND destination NOT IN ('36005','36047','36061','36081','36085')
+GROUP BY destination)
+GROUP BY county
+ORDER BY exempt DESC
+
+--Compare two counties to see if returns match in inflow and outflow table
+SELECT i.destination as indest, i.origin as inorg, i.returns as inreturn, i.exemptions as inexempt, 
+o.destination as outdest, o.origin as outorg, o.returns as outreturn, o.exemptions as outexempt,
+(i.returns-o.returns) as dif_return, (i.exemptions-o.exemptions) as dif_exempt
+FROM inflow_2014_15 i, outflow_2014_15 o
+where i.origin="06001" and i.destination ="06083" and o.origin="06001" and o.destination ="06083" and
+i.origin=o.origin
+
+--Compare all records to see if returns match in inflow and outflow table
+SELECT i.destination as indest, i.origin as inorg, i.returns as inreturn, i.exemptions as inexempt, 
+o.destination as outdest, o.origin as outorg, o.returns as outreturn, o.exemptions as outexempt,
+(i.returns-o.returns) as dif_return, (i.exemptions-o.exemptions) as dif_exempt
+FROM inflow_2014_15 i, outflow_2014_15 o
+WHERE i.origin=o.origin and i.destination=o.destination
+ORDER BY dif_return DESC
