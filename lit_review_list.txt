@@ -2,17 +2,27 @@
 
 - Allen2017: NYT opinion piece about African American millenials leaving NYC for the south.
 
-- Frey2017: blog post from Brookings that studies a revival in pre-recession patterns of migration.
+- Frey2017: Blog post from Brookings that studies a revival in pre-recession patterns of migration.
+
+- Florida2014: Brief article with maps and charts showing differences in domestic and foreign migration for big cities.
 
 - Fuller2017: Detailed report using the IRS migration data to study in-out migration in DC. References shortcomings with the most recent data. Referenced by Gregg2017.
+
+- Grabar2017: Article from Slate that mentions how pop estimates for foreign migration have been revised downward for many cities.
 
 - Gregg2017: WP article about millenials leaving DC. References Fuller2017.
 
 - IBO2009: NYC Independent Budget office report that looked at the IRS migration trends for NYC from 1989 to 2007. It showed net-migration was declining, and is much lower than recent numbers.
 
+- Ihrke2014: Census report that analyzes the reasons why people who moved did so.
+
+- Juday2016: Blog post from a demographic research group that looks at how natural increase and migration are inter-related, specific focus on NYC.
+
 - KDM2016: Detailed report on using the IRS migration data to study out-migration from Illinois.
 
 - Kusisto2017: DJ article that shows international migration is boosting urban populations.
+
+- Mateyka2015: Census report on number of people who desire to move, and why.
 
 - Mazerov2014: Technical paper that looks at the flawed logic of using IRS migration data to show states losing tax income, and assuming people are leaving because of high taxes.
 
@@ -20,11 +30,15 @@
 
 - Narkiewicz2016: Technical report that studies the statistics of income county to county migration data.
 
+- NYC2017: City planning department's summary analysis of population estimate data fro NYC 2010 to 2016, also good explanation of how PEP data is created.
+
 - Pew2010: Report that studies migration trends in Philadelphia using the IRS migration data.
 
 - Pew2016: An update to the Pew2010 on migration trends in Philadelphia.
 
 - Riordan-Nold2016: Blog post that looks at flawed logic of using IRS migration data to show that Connecticut is losing people because of taxes.
+
+- Roberts2014: Brief NYT article on strong population growth in NYC for first part of this decade.
 
 - Short2014: Academic journal article that categorizes US cities based on population change over the course of the 20th century.
 
@@ -35,4 +49,6 @@
 - Thompson2017: Atlantic Monthly article on why Americans are once again abandoning cities for suburbs, special focus on NYC.
 
 - Williams2015: NYT article on millenials leaving NYC for Los Angeles.
+
+Added a folder with census infographics
 
