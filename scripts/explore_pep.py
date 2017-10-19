@@ -16,7 +16,7 @@ plt.style.use('ggplot')
 data_path='/Users/anastasiaclark/irs_nyc_migration/data'
 nyc=['36005','36047','36061','36081','36085']
 
-years=['2010','2011','2012','2013','2014','2015', '2016']
+years=['2011','2012','2013','2014','2015', '2016']
 
 metro_pep=pd.read_csv(os.path.join(data_path, 'census_pop_est','cbsa-est2016-modified.csv'))
 metro_pep.set_index('CBSA',inplace=True)
@@ -30,6 +30,7 @@ county_pep.set_index('fips',inplace=True)
 # remove the udnderscore to make columns of interest be same in both datasets
 col_names=[c.replace('_','') for c in county_pep.columns]
 county_pep.columns=col_names
+county_pep=county_pep.query('COUNTY!="000"').copy()
 
 nyc_est=county_pep.loc[nyc]
 ny_metro=metro_pep[metro_pep.NAME.str.contains('New York')].copy()
@@ -72,4 +73,7 @@ plot_pop_change(df1, 'NYC Population Change, 2010-2016')
 
 # top 5 metro areas with largest pop growth
 for year in years:
-    print metro_pep[['NAME','NPOPCHG{}'.format(year)]].sort_values('NPOPCHG{}'.format(year),ascending=False).head(n=5)
+    county_pep[['RNATURALINC{}'.format(year),'RDOMESTICMIG{}'.format(year),'RINTERNATIONALMIG{}'.format(year)]].hist(color='k', alpha=0.5, bins=50,sharey=True)
+    print county_pep[['CTYNAME','STNAME','RDOMESTICMIG{}'.format(year)]].sort_values('RDOMESTICMIG{}'.format(year),ascending=False).head(n=10)
+    
+    
