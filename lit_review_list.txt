@@ -30,7 +30,9 @@
 
 - Narkiewicz2016: Technical report that studies the statistics of income county to county migration data.
 
-- NYC2017: City planning department's summary analysis of population estimate data fro NYC 2010 to 2016, also good explanation of how PEP data is created.
+- NYC2017a: City planning department's summary analysis of population estimate data fro NYC 2010 to 2016, also good explanation of how PEP data is created.
+
+- NYC2017b: City planning department's info brief on historic and recent migration trends in NYC.
 
 - Pew2010: Report that studies migration trends in Philadelphia using the IRS migration data.
 
@@ -39,6 +41,8 @@
 - Riordan-Nold2016: Blog post that looks at flawed logic of using IRS migration data to show that Connecticut is losing people because of taxes.
 
 - Roberts2014: Brief NYT article on strong population growth in NYC for first part of this decade.
+
+- Robbins2016: VV article on people living in Philly and commuting to NYC.
 
 - Short2014: Academic journal article that categorizes US cities based on population change over the course of the 20th century.
 
