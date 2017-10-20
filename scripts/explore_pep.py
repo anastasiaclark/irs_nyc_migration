@@ -75,5 +75,44 @@ plot_pop_change(df1, 'NYC Population Change, 2010-2016')
 for year in years:
     county_pep[['RNATURALINC{}'.format(year),'RDOMESTICMIG{}'.format(year),'RINTERNATIONALMIG{}'.format(year)]].hist(color='k', alpha=0.5, bins=50,sharey=True)
     print county_pep[['CTYNAME','STNAME','RDOMESTICMIG{}'.format(year)]].sort_values('RDOMESTICMIG{}'.format(year),ascending=False).head(n=10)
+
+
+def rate_heat_map(rate_col,by_area,title):
     
+    '''create a heat map of counties groupoed by
+    passed area and fr the passed rate over the years'''
     
+    divisions={1 : 'New England', 
+            2 : 'Middle Atlantic', 
+            3 : 'East North Central',
+            4 : 'West North Central', 
+            5 : 'South Atlantic', 
+            6 : 'East South Central', 
+            7 : 'West South Central', 
+            8 : 'Mountain', 
+            9 : 'Pacific'}     
+
+
+    regions={1 :'Northeast', 
+            2 : 'Midwest', 
+            3 : 'South',  
+            4 : 'West' }
+
+    cols=county_pep.columns[(county_pep.columns.str.contains(rate_col))|(county_pep.columns.str.contains(by_area))]
+    grouped=county_pep[cols].groupby(by_area).mean()
+    # get the year on as the column name
+    grouped.columns=[c[-4:] for c in grouped.columns]
+    
+    if by_area=='DIVISION':
+        df=pd.Series(divisions).to_frame().rename(columns={0:'division'})
+    elif by_area=='REGION':
+        df=pd.Series(regions).to_frame().rename(columns={0:'regions'})
+        
+    grouped=grouped.merge(df, left_index=True, right_index=True).set_index(df.columns[0])
+    sns.heatmap(grouped)
+    sns.plt.title(title)
+
+    
+
+
+
