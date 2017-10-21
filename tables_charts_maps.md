@@ -1,4 +1,4 @@
-#Questions to Answer with Tables and Charts
+# Questions to Answer with Tables and Charts
 
 Each of these should be answered twice: one at the NYC and county level, and again at the NYC metro level. 
 
@@ -6,7 +6,7 @@ For questions where we generate either a large list or a small number of summary
 
 For maps I think the most logical would be the top net senders / receivers for metro areas in one map. We can try counties too but think it would be less interesting because of clustering around NYC. Could also try raw count of senders / receivers for both counties and metros each in separate maps.
 
-##PEP
+## PEP
 
 - What was the population change (count and rate) for NYC / NYM (year by year and cumulative)? 
 
@@ -32,7 +32,7 @@ For maps I think the most logical would be the top net senders / receivers for m
     - Deficit areas (negative net change)
     - Surplus areas (positive net change)
 
-##10 Biggest Cities
+## 10 Biggest Cities
 
 10 is a logical cut-off as all these cities have at least 1 million people. Number 11 (Austin, TX) has 950k versus 10 (San Jose) 1.03mil.
 
@@ -51,7 +51,7 @@ cities=['06037','17031','48201','04013','42101','48029','06073','48113','06085']
 
 Anomalies: NYC is the only city that is composed of entire, multiple counties. With the exception of NYC and Philadelphia, all of the cities in this list are located within counties that contain areas that are not part of the city. Small portions of the City of Dallas fall inside other counties that are not included here.
 
-##14 biggest metro areas
+## 14 biggest metro areas
 
 14 is a logical cut-off as all these metros have at least 4 million people. Number 15 (Seattle) has 3.8mil versus 14 (Detroit) at 4.3mil. If we wanted a shorter list, next logical cut-off would be at 9; Atlanta has 5.8mil while number 10 Boston has 4.8mil. 
 
