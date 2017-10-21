@@ -71,7 +71,7 @@ def plot_pop_change(df, title):
 df1=reshape_dataset(city)    
 plot_pop_change(df1, 'NYC Population Change, 2010-2016')   
 
-# top 5 metro areas with largest pop growth
+
 for year in years:
     county_pep[['RNATURALINC{}'.format(year),'RDOMESTICMIG{}'.format(year),'RINTERNATIONALMIG{}'.format(year)]].hist(color='k', alpha=0.5, bins=50,sharey=True)
     print county_pep[['CTYNAME','STNAME','RDOMESTICMIG{}'.format(year)]].sort_values('RDOMESTICMIG{}'.format(year),ascending=False).head(n=10)
@@ -79,8 +79,8 @@ for year in years:
 
 def rate_heat_map(rate_col,by_area,title):
     
-    '''create a heat map of counties groupoed by
-    passed area and fr the passed rate over the years'''
+    '''create a heat map of counties grouped by
+    passed area and the passed rate over the years'''
     
     divisions={1 : 'New England', 
             2 : 'Middle Atlantic', 
@@ -100,7 +100,7 @@ def rate_heat_map(rate_col,by_area,title):
 
     cols=county_pep.columns[(county_pep.columns.str.contains(rate_col))|(county_pep.columns.str.contains(by_area))]
     grouped=county_pep[cols].groupby(by_area).mean()
-    # get the year on as the column name
+    # get the year only as the column name
     grouped.columns=[c[-4:] for c in grouped.columns]
     
     if by_area=='DIVISION':
