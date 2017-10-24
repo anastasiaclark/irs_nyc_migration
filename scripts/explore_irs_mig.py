@@ -231,3 +231,14 @@ plot_ranks (all_time_top_senders, 'Change in Ranks for Top Migrant Senders to NY
 plot_ranks (all_time_top_receivers, 'Change in Ranks for Top Migrant Receivers from NYC')
 
 # TO DO resolve the issue#2, update jupyter notebook 
+
+
+def get_total_flows(df):
+  in_mig=pd.DataFrame(df[['inflow2011_12','inflow2012_13','inflow2013_14','inflow2014_15']].sum(axis=0), columns=['in_migration']).reset_index().rename(columns={'index':'years'})
+  in_mig['years']=in_mig.years.apply(lambda x :x[-7:])
+  out_mig=pd.DataFrame(df[['outflow2011_12','outflow2012_13','outflow2013_14','outflow2014_15']].sum(axis=0), columns=['out_migration']).reset_index().rename(columns={'index':'years'})
+  out_mig['years']=out_mig.years.apply(lambda x :x[-7:])
+  df_total=pd.merge(in_mig,out_mig, on='years')
+  df_total['net_migration']=df_total['in_migration']-df_total['out_migration']
+  return df_total
+  

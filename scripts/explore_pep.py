@@ -42,7 +42,12 @@ net_dom=[c for c in nyc_est.columns if c.startswith('DOMESTICMIG')]
 
 keep_cols=pop_change+nat_inc+net_int+net_dom
 nyc_est=nyc_est[keep_cols].copy()
+
+# added 4 months pop chnage from April to July to total 200-2011 pop change
+nyc_est['NPOPCHG2011']=nyc_est['NPOPCHG2011']+nyc_est['NPOPCHG2010']
+
 ny_metro=ny_metro[keep_cols]
+ny_metro['NPOPCHG2011']=ny_metro['NPOPCHG2011']+ny_metro['NPOPCHG2010']
 
 city=nyc_est.sum(axis=0)
 
