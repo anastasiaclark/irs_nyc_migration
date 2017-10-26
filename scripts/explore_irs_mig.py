@@ -20,7 +20,15 @@ years = ['2011_12', '2012_13', '2013_14', '2014_15']  # project years
 
 # add here variables that holdcounties list for other cities
 # NYC counties
-nyc = ['36005', '36047', '36061', '36081', '36085']
+nyc = ('36005', '36047', '36061', '36081', '36085')
+
+nyma=('34003','34013','34017','34019','34023','34025','34027','34029','34031',\
+      '34035','34037','34039','36005','36027','36047','36059','36061','36071',\
+      '36079','36081','36085','36087','36103','36119','42103')
+
+foreign=('57005','57009','57001','57003','57007')
+suppressed=('58000','59000')
+
 
 
 def get_flows_by_city(year, city):
@@ -63,99 +71,17 @@ def get_flows_by_city(year, city):
     # merge metro areas info to nyc flows to determine which counties from these flows are urban
     flows_city = flows_city.merge (metros[['cbsa_code', 'cbsa_name', 'fips']], left_on='co_fips', right_on='fips',
                                    how='left').drop ('fips', 1)
-
+    
+    # label counties that are nor part of the metro areas and are not supressed or foregin as non-metro counties
+    flows_city.loc[(~flows_city['co_fips'].isin(suppressed)) & (~flows_city['co_fips'].isin(foreign)) & (flows_city['cbsa_code'].isnull()),['cbsa_name']]='non-metro'
+    
     # add calculated columns
     flows_city['net_flow' + year] = flows_city['inflow' + year] - flows_city['outflow' + year]
-    flows_city['in_ratio' + year] = flows_city['inflow' + year] / flows_city['outflow' + year]
+    #flows_city['in_ratio' + year] = flows_city['inflow' + year] / flows_city['outflow' + year]
     return flows_city
 
 
-def get_flows_by_metro(year, metro):
-    """ function to read in data from the database
-    and summarize it for selected metro area
-
-    :param year: The year period from the database in the format 'yyyy_yy'
-    :param metro: Name of the metro area; 
-            can pass only part of the name if the part is unique for metros
-            Ex: 'New York' for New York-Newark-Jersey City, NY-NJ-PA
-    :return: dataframe of flows by specified metro area
-    :rtype: dataframe"""
-
-    # read in inflow & outflow data and store it in a pandas dataframe
-    table1 = 'outflow_{}'.format (year)
-    table2 = 'inflow_{}'.format (year)
-
-    # SQL query to select fl
-    # ows between, but not within counties
-    df_out = pd.read_sql_query ("SELECT * from {} where {}.origin!={}.destination".format (table1, table1, table1), con)
-    df_in = pd.read_sql_query ("SELECT * from {} where {}.origin!={}.destination".format (table2, table2, table2), con)
-
-    # Make the index to be same for same records
-    df_out['uid'] = df_out.origin + "_" + df_out.destination
-    df_in['uid'] = df_in.origin + "_" + df_in.destination
-
-    df_in.set_index ('uid', inplace=True)
-    df_out.set_index ('uid', inplace=True)
-
-    # get the flows by metro area
-    # drop a column in each table, so that the columns are the same in both tables
-    df_in.drop ('co_orig_name', 1, inplace=True)
-    df_out.drop ('co_dest_name', 1, inplace=True)
-
-    # get inflow and outflow into a single table and since most of the records exist in both tables, drop duplicates
-    flows = pd.concat ([df_in, df_out], axis=0).drop_duplicates (
-        subset=['origin', 'destination', 'returns', 'exemptions'])
-
-    # check if there are any records with duplicated indexes
-    if len (flows[flows.index.duplicated ()]) > 0:
-        non_matching = flows.index[flows.index.duplicated ()]
-
-        dfs = []
-        for ix in non_matching:
-            a = flows.loc[ix, ['exemptions', 'returns']]
-            d = a.diff ()
-            dfs.append (d)
-        df = pd.concat (dfs)
-
-        print ('Summary of the unmatched inflow and outflow tables for year:', year)
-        print ('Max difference in exemptions', df.exemptions.max ())
-        print ('Min difference in exemptions', df.exemptions.min ())
-        print ('Max difference in returns', df.returns.max ())
-        print ('Min difference in returns', df.returns.min ())
-        print (len (flows))
-        flows = flows[~flows.index.duplicated (keep='first')]
-        print (len (flows))
-
-    # merge metro area information twice: for county of origin and for county of destination
-    flows = flows.merge (metros[['fips', 'cbsa_code', 'cbsa_name']], left_on='destination', right_on='fips',
-                         how='left').drop ('fips', 1).rename (
-        columns={'cbsa_name': 'dest_name', 'cbsa_code': 'dest_cbsa'})
-    flows = flows.merge (metros[['fips', 'cbsa_code', 'cbsa_name']], left_on='origin', right_on='fips',
-                         how='left').drop ('fips', 1).rename (
-        columns={'cbsa_name': 'orig_name', 'cbsa_code': 'orig_cbsa'})
-
-    # groupby metro of origin and destination to get flows b/n metro areas
-    flows_metro = flows[['orig_cbsa', 'orig_name', 'dest_cbsa', 'dest_name', 'returns', 'exemptions']].groupby (
-        ['orig_cbsa', 'orig_name', 'dest_cbsa', 'dest_name']).sum ().reset_index ()
-
-    metro_in = flows_metro[(flows_metro.dest_name.str.contains (metro)) & (
-        ~flows_metro.orig_name.str.contains (metro))].copy ()  # get all the inter-metro inflows
-    metro_out = flows_metro[(flows_metro.orig_name.str.contains (metro)) & (
-        ~flows_metro.dest_name.str.contains (metro))].copy ()  # get all the inter-metro outflows
-
-    # rename columns for merging inflow and outflow tables together
-    metro_in = metro_in[['orig_cbsa', 'orig_name', 'exemptions']].rename (
-        columns={'orig_cbsa': 'cbsa_code', 'orig_name': 'cbsa_name', 'exemptions': 'inflow' + year})
-    metro_out = metro_out[['dest_cbsa', 'dest_name', 'exemptions']].rename (
-        columns={'dest_cbsa': 'cbsa_code', 'dest_name': 'cbsa_name', 'exemptions': 'outflow' + year})
-
-    # merge inflow and outflow by metro into a single table
-    by_metro = pd.merge (metro_in, metro_out, on=['cbsa_code', 'cbsa_name'], how='outer')
-
-    # add calculated columns
-    by_metro['net_flow' + year] = by_metro['inflow' + year] - by_metro['outflow' + year]
-    return by_metro
-
+######################################################################################################
 
 # this part is specific to NYC/NY metro , but can be repeated for any other city/metro
 
@@ -165,58 +91,86 @@ for year in years:
     city_flows_dfs.append (get_flows_by_city (year, nyc))
 
 for year in years:
-    metro_flows_dfs.append (get_flows_by_metro (year, 'New York'))
+    metro_flows_dfs.append (get_flows_by_city (year, nyma))
 
 # merge all years dfs for NYC (Metro) from the list into a single df
 city_flows=reduce(lambda x, y: pd.merge(x, y, on = ['co_fips', 'co_name', 'state', 'cbsa_code', 'cbsa_name'], how='outer'), city_flows_dfs)
-metro_flows=reduce(lambda x, y: pd.merge(x, y, on = ['cbsa_code', 'cbsa_name'], how='outer'), metro_flows_dfs)
+metro_flows=reduce(lambda x, y: pd.merge(x, y, on = ['co_fips', 'co_name', 'state', 'cbsa_code', 'cbsa_name'], how='outer'), metro_flows_dfs)
 
+# create table of flows grouped by metro area
+grouped_by_metro=metro_flows.groupby('cbsa_name').sum()
 
+# get a list of net_flow columns--needs to be recalculated
+net_cols=[c for c in grouped_by_metro.columns if 'net_flow' in c]
+for col in net_cols:
+    yr = col[-7:]
+    grouped_by_metro[col]= grouped_by_metro['inflow' + yr] - grouped_by_metro['outflow' + yr]
+    
 # create ranks for inflow and outflow for each year
-# since columns names are the same in metro and city tables, resuse the loop for both tables
 city_flows.fillna (0, inplace=True)
-metro_flows.fillna (0, inplace=True)
+metro_flows.fillna(0, inplace=True)
 for col in [c for c in city_flows.columns if 'inflow' in c or 'outflow' in c]:
     yr = col[-7:]
     in_out = col[0:2]
     city_flows['{}_rank{}'.format (in_out, yr)] = city_flows[col].rank (method='dense', ascending=False)
     metro_flows['{}_rank{}'.format (in_out, yr)] = metro_flows[col].rank (method='dense', ascending=False)
 
+
 # write the resulting data out to use for mapping in QGIS 
 # city_flows.to_csv('yrs_2011_2015_nyc_mig_by_county.csv')
 # metro_flows.to_csv('yrs_2011_2015_ny_mig_by_metro.csv')
 
-# get the counties that were ranked as top 5 (top 10) senders/receivers in any of the four years
-# do we want to do the same for Metros??
+# get top senders/receivers
+# counties that were ranked as top 5 (top 10) senders/receivers in any of the four years periods
+# plots
+    
+domestic_city_flows=city_flows[~city_flows['co_fips'].isin (foreign)].copy()
+foreign_city_flows=city_flows[city_flows['co_fips'].isin (foreign)].copy()
 
-all_time_top_senders = \
-    city_flows[['co_name', 'state', 'in_rank2011_12', 'in_rank2012_13', 'in_rank2013_14', 'in_rank2014_15']][
-        (city_flows['in_rank2011_12'] < 5) | (city_flows['in_rank2012_13'] < 6) | (
-            city_flows['in_rank2013_14'] < 6) | (
-            city_flows['in_rank2014_15'] < 6)]
-all_time_top_senders['county'] = all_time_top_senders['co_name'] + "," + all_time_top_senders['state']
-all_time_top_senders = all_time_top_senders.set_index ('county').drop (['co_name', 'state'], 1)
-all_time_top_senders.columns = [col[-7:] for col in all_time_top_senders.columns]
+domestic_metro_flows=metro_flows[~metro_flows['co_fips'].isin (foreign)].copy()
+foreign_metro_flows=metro_flows[metro_flows['co_fips'].isin (foreign)].copy()
 
-all_time_top_receivers = \
-    city_flows[['co_name', 'state', 'ou_rank2011_12', 'ou_rank2012_13', 'ou_rank2013_14', 'ou_rank2014_15']][
-        (city_flows['ou_rank2011_12'] < 10) | (city_flows['ou_rank2012_13'] < 10) | (
-            city_flows['ou_rank2013_14'] < 10) | (city_flows['ou_rank2014_15'] < 10)]
-all_time_top_receivers['county'] = all_time_top_receivers['co_name'] + "," + all_time_top_receivers['state']
-all_time_top_receivers = all_time_top_receivers.set_index ('county').drop (['co_name', 'state'], 1)
-all_time_top_receivers.columns = [col[-7:] for col in all_time_top_receivers.columns]
+# number of top places that send/receive movers to/from NYC/NYMA
+top =10
 
+def get_top_senders(df):
+    all_time_top_senders = \
+        df[
+            (df['in_rank2011_12'] <= top) | (df['in_rank2012_13'] <= top) | (
+                df['in_rank2013_14'] <= top) | (
+                df['in_rank2014_15'] <= top)].copy()
 
-def plot_ranks(df, title):
+    return all_time_top_senders
+    
+def get_top_receivers(df):    
+    all_time_top_receivers = \
+        df[
+            (df['ou_rank2011_12'] <= top) | (df['ou_rank2012_13'] <= top) | (
+                df['ou_rank2013_14'] <= top) | (df['ou_rank2014_15'] <= top)].copy()
+
+    return all_time_top_receivers
+
+top_senders_to_nyc=get_top_senders(domestic_city_flows)
+top_senders_to_nyc['county'] = top_senders_to_nyc['co_name'] + "," + top_senders_to_nyc['state']
+top_senders_to_nyc = top_senders_to_nyc.set_index ('county').drop (['co_name', 'state'], 1)
+
+top_receivers_from_nyc=get_top_receivers(domestic_city_flows)
+top_receivers_from_nyc['county'] = top_receivers_from_nyc['co_name'] + "," + top_receivers_from_nyc['state']
+top_receivers_from_nyc = top_receivers_from_nyc.set_index ('county').drop (['co_name', 'state'], 1)
+
+def plot_ranks(df, cols, title):
 
     """function to plot change in ranks over time
     :param df: dataframe to plot
+    :param cols: a list of colum ranks to plot 
     :param title: Tile to display
     """
-
-    ax = df.T.plot (marker='o')
+    df_ranks=df[cols]
+    df_ranks.columns = [col[-7:] if 'rank' in col else col for col in df_ranks.columns]
+    ax = df_ranks.T.plot (marker='o')
     ax.invert_yaxis ()
     ax.yaxis.set_major_locator (ticker.MaxNLocator (integer=True)) # display only whole numbers
+    ax.set_ylim([df_ranks.max().max(),1])
     ax.legend (bbox_to_anchor=(1.07, 1), loc='upper left')
     ax.set_xlabel ('Year')
     ax.set_ylabel ('Rank')
@@ -227,10 +181,9 @@ def plot_ranks(df, title):
     plt.show ()
 
 
-plot_ranks (all_time_top_senders, 'Change in Ranks for Top Migrant Senders to NYC')
-plot_ranks (all_time_top_receivers, 'Change in Ranks for Top Migrant Receivers from NYC')
 
-# TO DO resolve the issue#2, update jupyter notebook 
+plot_ranks (top_senders_to_nyc,['in_rank2011_12', 'in_rank2012_13', 'in_rank2013_14', 'in_rank2014_15'], 'Change in Ranks for Top Migrant Senders to NYC')
+plot_ranks (top_receivers_from_nyc,['ou_rank2011_12', 'ou_rank2012_13', 'ou_rank2013_14', 'ou_rank2014_15'], 'Change in Ranks for Top Migrant Receivers from NYC')
 
 
 def get_total_flows(df):
@@ -240,5 +193,29 @@ def get_total_flows(df):
   out_mig['years']=out_mig.years.apply(lambda x :x[-7:])
   df_total=pd.merge(in_mig,out_mig, on='years')
   df_total['net_migration']=df_total['in_migration']-df_total['out_migration']
+  df_total.set_index('years',inplace=True)  
   return df_total
+
+total_city_foreign=get_total_flows(foreign_city_flows)
+total_city_dom=get_total_flows(domestic_city_flows)
+
+total_metro_dom=get_total_flows(domestic_metro_flows)
+total_metro_foreign=get_total_flows(foreign_metro_flows)
+
+def plot_migration(df, title):
+    ax=df[['in_migration','out_migration']].plot(rot=0, legend=False, color=['#A0CCCF','#FFB834'])
+    df['net_migration'].plot(kind='bar', ax=ax, rot=0, color='#006944', width=0.2)
+    ax.legend (bbox_to_anchor=(1.07, 1), loc='upper left')
+    ax.get_yaxis().set_major_formatter(plt.FuncFormatter(lambda x, loc: "{:,}".format(int(x))))
+    ax.set_title(title)
+    plt.show()
   
+plot_migration(total_city_dom, 'NYC Domestic Migration, 2011-2014')
+plot_migration(total_city_foreign,'NYC International Migration, 2011-2014')
+
+plot_migration(total_metro_dom, 'New York Metro Domestic Migration, 2011-2014')
+plot_migration(total_metro_foreign,'New York Metro International Migration, 2011-2014')
+
+
+grouped_by_metro=metro_flows.groupby('cbsa_name').sum()
+# to do display cummulative on the plot
