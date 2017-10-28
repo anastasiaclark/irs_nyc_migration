@@ -18,7 +18,6 @@ metros = pd.read_csv (os.path.join (data_path, 'metros', 'metros_basic.csv'),
 
 years = ['2011_12', '2012_13', '2013_14', '2014_15']  # project years
 
-# add here variables that holdcounties list for other cities
 # NYC counties
 nyc = ('36005', '36047', '36061', '36081', '36085')
 
@@ -203,8 +202,8 @@ total_metro_dom=get_total_flows(domestic_metro_flows)
 total_metro_foreign=get_total_flows(foreign_metro_flows)
 
 def plot_migration(df, title):
-    ax=df[['in_migration','out_migration']].plot(rot=0, legend=False, color=['#A0CCCF','#FFB834'])
-    df['net_migration'].plot(kind='bar', ax=ax, rot=0, color='#006944', width=0.2)
+    ax=df[['in_migration','out_migration']].plot(rot=0, legend=False, color=['blue','green'])
+    df['net_migration'].plot(kind='bar', ax=ax, rot=0, color='red', width=0.2)
     ax.legend (bbox_to_anchor=(1.07, 1), loc='upper left')
     ax.get_yaxis().set_major_formatter(plt.FuncFormatter(lambda x, loc: "{:,}".format(int(x))))
     ax.set_title(title)
@@ -217,5 +216,5 @@ plot_migration(total_metro_dom, 'New York Metro Domestic Migration, 2011-2014')
 plot_migration(total_metro_foreign,'New York Metro International Migration, 2011-2014')
 
 
-grouped_by_metro=metro_flows.groupby('cbsa_name').sum()
+grouped_by_metro=total_metro_dom.groupby('cbsa_name').sum()
 # to do display cummulative on the plot
