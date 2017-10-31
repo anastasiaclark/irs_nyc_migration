@@ -1,0 +1,128 @@
+cbsa_code,cbsa_name,returns,exempts
+37980,"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",6607,9907
+33100,"Miami-Fort Lauderdale-West Palm Beach, FL",6388,9757
+47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",5076,7660
+31080,"Los Angeles-Long Beach-Anaheim, CA",4513,6196
+14860,"Bridgeport-Stamford-Norwalk, CT",3816,5901
+12420,"Austin-Round Rock, TX",2799,5231
+14460,"Boston-Cambridge-Newton, MA-NH",3841,5001
+45940,"Trenton, NJ",2359,3962
+10900,"Allentown-Bethlehem-Easton, PA-NJ",1948,3288
+16980,"Chicago-Naperville-Elgin, IL-IN-WI",2417,3283
+12580,"Baltimore-Columbia-Towson, MD",1736,2996
+41860,"San Francisco-Oakland-Hayward, CA",2327,2979
+36740,"Orlando-Kissimmee-Sanford, FL",1618,2788
+12060,"Atlanta-Sandy Springs-Roswell, GA",1666,2615
+45300,"Tampa-St. Petersburg-Clearwater, FL",1225,1984
+28740,"Kingston, NY",1169,1920
+35300,"New Haven-Milford, CT",1210,1878
+26420,"Houston-The Woodlands-Sugar Land, TX",1003,1623
+20700,"East Stroudsburg, PA",814,1577
+19100,"Dallas-Fort Worth-Arlington, TX",979,1557
+10580,"Albany-Schenectady-Troy, NY",1064,1543
+41740,"San Diego-Carlsbad, CA",1000,1496
+25540,"Hartford-West Hartford-East Hartford, CT",903,1319
+16740,"Charlotte-Concord-Gastonia, NC-SC",786,1297
+38060,"Phoenix-Mesa-Scottsdale, AZ",810,1189
+41940,"San Jose-Sunnyvale-Santa Clara, CA",706,1189
+42660,"Seattle-Tacoma-Bellevue, WA",794,1073
+12100,"Atlantic City-Hammonton, NJ",577,920
+39580,"Raleigh, NC",535,893
+39300,"Providence-Warwick, RI-MA",545,792
+42540,"Scranton--Wilkes-Barre--Hazleton, PA",414,736
+15380,"Buffalo-Cheektowaga-Niagara Falls, NY",530,723
+38300,"Pittsburgh, PA",525,722
+19820,"Detroit-Warren-Dearborn, MI",484,717
+29820,"Las Vegas-Henderson-Paradise, NV",416,635
+18140,"Columbus, OH",384,577
+40380,"Rochester, NY",411,571
+47260,"Virginia Beach-Norfolk-Newport News, VA-NC",325,530
+45060,"Syracuse, NY",375,514
+33460,"Minneapolis-St. Paul-Bloomington, MN-WI",398,492
+40060,"Richmond, VA",312,465
+39740,"Reading, PA",209,398
+27260,"Jacksonville, FL",243,388
+17460,"Cleveland-Elyria, OH",270,385
+49340,"Worcester, MA-CT",255,378
+15980,"Cape Coral-Fort Myers, FL",236,376
+46520,"Urban Honolulu, HI",225,346
+40140,"Riverside-San Bernardino-Ontario, CA",261,344
+20500,"Durham-Chapel Hill, NC",253,341
+19740,"Denver-Aurora-Lakewood, CO",270,328
+13780,"Binghamton, NY",196,323
+35980,"Norwich-New London, CT",203,319
+45860,"Torrington, CT",218,312
+37340,"Palm Bay-Melbourne-Titusville, FL",187,297
+26460,"Hudson, NY",158,280
+44140,"Springfield, MA",203,277
+38900,"Portland-Vancouver-Hillsboro, OR-WA",224,272
+19660,"Deltona-Daytona Beach-Ormond Beach, FL",149,251
+22180,"Fayetteville, NC",117,232
+29460,"Lakeland-Winter Haven, FL",126,229
+41180,"St. Louis, MO-IL",186,224
+41700,"San Antonio-New Braunfels, TX",163,222
+27060,"Ithaca, NY",177,218
+35840,"North Port-Sarasota-Bradenton, FL",169,217
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN",166,216
+35380,"New Orleans-Metairie, LA",167,206
+29540,"Lancaster, PA",116,187
+38940,"Port St. Lucie, FL",118,180
+40900,"Sacramento--Roseville--Arden-Arcade, CA",123,173
+17140,"Cincinnati, OH-KY-IN",143,171
+31700,"Manchester-Nashua, NH",115,166
+24660,"Greensboro-High Point, NC",102,163
+12700,"Barnstable Town, MA",113,147
+11460,"Ann Arbor, MI",122,146
+16700,"Charleston-North Charleston, SC",114,145
+34940,"Naples-Immokalee-Marco Island, FL",91,134
+41620,"Salt Lake City, UT",97,134
+28140,"Kansas City, MO-KS",106,131
+32820,"Memphis, TN-MS-AR",90,130
+26900,"Indianapolis-Carmel-Anderson, IN",82,116
+46540,"Utica-Rome, NY",72,114
+38860,"Portland-South Portland, ME",102,112
+25420,"Harrisburg-Carlisle, PA",77,107
+31540,"Madison, WI",93,105
+37100,"Oxnard-Thousand Oaks-Ventura, CA",79,100
+33340,"Milwaukee-Waukesha-West Allis, WI",71,90
+49180,"Winston-Salem, NC",60,84
+17900,"Columbia, SC",53,82
+14500,"Boulder, CO",69,80
+46060,"Tucson, AZ",65,78
+23540,"Gainesville, FL",58,76
+27340,"Jacksonville, NC",44,74
+15540,"Burlington-South Burlington, VT",58,72
+42200,"Santa Maria-Santa Barbara, CA",60,70
+31140,"Louisville/Jefferson County, KY-IN",59,69
+34820,"Myrtle Beach-Conway-North Myrtle Beach, SC-NC",45,68
+10420,"Akron, OH",44,67
+10740,"Albuquerque, NM",49,67
+17820,"Colorado Springs, CO",49,67
+45220,"Tallahassee, FL",52,65
+39340,"Provo-Orem, UT",37,63
+38340,"Pittsfield, MA",44,59
+12940,"Baton Rouge, LA",41,58
+21340,"El Paso, TX",29,58
+36140,"Ocean City, NJ",46,56
+36540,"Omaha-Council Bluffs, NE-IA",45,56
+24860,"Greenville-Anderson-Mauldin, SC",43,53
+48060,"Watertown-Fort Drum, NY",28,51
+42340,"Savannah, GA",35,43
+13820,"Birmingham-Hoover, AL",33,42
+17200,"Claremont-Lebanon, NH-VT",36,42
+36420,"Oklahoma City, OK",27,36
+49620,"York-Hanover, PA",20,34
+20100,"Dover, DE",22,33
+11700,"Asheville, NC",27,32
+46140,"Tulsa, OK",22,31
+24340,"Grand Rapids-Wyoming, MI",22,30
+42680,"Sebastian-Vero Beach, FL",20,30
+42220,"Santa Rosa, CA",20,29
+23420,"Fresno, CA",21,28
+30460,"Lexington-Fayette, KY",20,28
+25940,"Hilton Head Island-Bluffton-Beaufort, SC",22,26
+16820,"Charlottesville, VA",22,24
+42140,"Santa Fe, NM",21,23
+44300,"State College, PA",22,23
+21660,"Eugene, OR",21,22
+41500,"Salinas, CA",20,21

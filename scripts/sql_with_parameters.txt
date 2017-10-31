@@ -1,0 +1,116 @@
+#FOR NYC COUNTIES AND COUNTY-LEVEL DATA
+
+#Get inflows for NYC
+SELECT origin, st_orig_abbrv, co_orig_name, sum(returns) AS returns, sum(exemptions) AS exempts
+FROM inflow_2010_11 WHERE destination IN ('36005','36047','36061','36081','36085')
+AND origin NOT IN ('36005','36047','36061','36081','36085') GROUP BY origin, st_orig_abbrv, co_orig_name
+ORDER BY sum(exemptions) DESC
+
+#Get outflows for NYC
+SELECT destination, st_dest_abbrv, co_dest_name, sum(returns) AS returns, sum(exemptions) AS exempts 
+FROM outflow_2010_11 WHERE origin IN ('36005','36047','36061','36081','36085') 
+AND destination NOT IN ('36005','36047','36061','36081','36085') 
+GROUP BY destination, st_dest_abbrv, co_dest_name
+ORDER BY sum(exemptions) DESC
+
+#Get net change for NYC
+SELECT county, sum(returns) AS returns, sum(exempt) AS exempt
+FROM (
+SELECT origin AS county, sum(returns) as returns, sum(exemptions) as exempt
+FROM inflow_2011_12
+WHERE destination IN ('36005','36047','36061','36081','36085') AND origin NOT IN ('36005','36047','36061','36081','36085')
+GROUP BY origin
+UNION
+SELECT destination AS county, sum(returns)*-1 as returns, sum(exemptions)*-1 as exempt
+FROM outflow_2011_12
+WHERE origin IN ('36005','36047','36061','36081','36085') AND destination NOT IN ('36005','36047','36061','36081','36085')
+GROUP BY destination)
+GROUP BY county
+ORDER BY exempt DESC
+
+#Get net change summary totals for NYC
+SELECT i.origin, sum(i.returns - o.returns) AS Net_Change_Returns,
+sum(i.exemptions - o.exemptions) AS Net_Change_Exempts
+FROM inflow_2011_12_totals AS i JOIN outflow_2011_12_totals AS o
+WHERE i.uid = o.uid
+AND i.origin LIKE '9%%' AND i.destination IN ('36005','36047','36061','36081','36085')
+AND o.destination LIKE '9%%' AND o.origin IN ('36005','36047','36061','36081','36085')
+GROUP BY i.origin
+
+#TESTS FOR JOINING COUNTY AND METRO
+
+#Basic join to assign metro ids and names to inflow
+SELECT md.cbsa_code, md.cbsa_name, destination, st_dest_abbrv, origin, st_orig_abbrv, co_orig_name, mo.cbsa_code, mo.cbsa_name, returns, exemptions
+FROM inflow_2011_12 i
+LEFT JOIN metros md ON i.destination = md.fips
+LEFT JOIN metros mo ON i.origin = mo.fips
+
+#Basic join to assign metro ids and names to inflow with filter
+SELECT md.cbsa_code, md.cbsa_name, destination, st_dest_abbrv, origin, st_orig_abbrv, co_orig_name, mo.cbsa_code, mo.cbsa_name, returns, exemptions
+FROM inflow_2011_12 i
+LEFT JOIN metros md ON i.destination = md.fips
+LEFT JOIN metros mo ON i.origin = mo.fips
+WHERE md.cbsa_code =  '35620' AND mo.cbsa_code != '35620'
+
+#Basic join to assign metro ids and names to outflow with filter
+SELECT mo.cbsa_code, mo.cbsa_name, origin, st_orig_abbrv, destination, st_dest_abbrv, co_dest_name, md.cbsa_code, md.cbsa_name, returns, exemptions
+FROM outflow_2011_12 o
+LEFT JOIN metros md ON o.destination = md.fips
+LEFT JOIN metros mo ON o.origin = mo.fips
+WHERE mo.cbsa_code =  '35620' AND md.cbsa_code != '35620'
+
+#FOR NY METRO AND METRO-LEVEL DATA
+
+#Get inflows for NY Metro
+SELECT mo.cbsa_code, mo.cbsa_name, sum(returns) AS returns, sum(exemptions) AS exempts
+FROM inflow_2011_12 i
+LEFT JOIN metros md ON i.destination = md.fips
+LEFT JOIN metros mo ON i.origin = mo.fips
+WHERE md.cbsa_code =  '35620' AND mo.cbsa_code != '35620'
+GROUP BY mo.cbsa_code, mo.cbsa_name
+ORDER BY sum(exemptions) DESC
+
+#Get outflows for NY Metro
+SELECT md.cbsa_code, md.cbsa_name, sum(returns) AS returns, sum(exemptions) AS exempts
+FROM outflow_2011_12 o
+LEFT JOIN metros md ON o.destination = md.fips
+LEFT JOIN metros mo ON o.origin = mo.fips
+WHERE mo.cbsa_code =  '35620' AND md.cbsa_code != '35620'
+GROUP BY md.cbsa_code, md.cbsa_name
+ORDER BY sum(exemptions) DESC
+
+#Get net change for NY Metro
+SELECT cbsa_code, cbsa_name, sum(returns) AS returns, sum(exempt) AS exempt
+FROM (
+SELECT mo.cbsa_code, mo.cbsa_name, sum(returns) as returns, sum(exemptions) as exempt
+FROM inflow_2011_12 i
+LEFT JOIN metros md ON i.destination = md.fips
+LEFT JOIN metros mo ON i.origin = mo.fips
+WHERE md.cbsa_code =  '35620' AND mo.cbsa_code != '35620'
+GROUP BY mo.cbsa_code
+UNION
+SELECT md.cbsa_code, md.cbsa_name, sum(returns)*-1 as returns, sum(exemptions)*-1 as exempt
+FROM outflow_2011_12 o
+LEFT JOIN metros md ON o.destination = md.fips
+LEFT JOIN metros mo ON o.origin = mo.fips
+WHERE mo.cbsa_code =  '35620' AND md.cbsa_code != '35620'
+GROUP BY md.cbsa_code)
+GROUP BY cbsa_code, cbsa_name
+ORDER BY exempt DESC
+
+#Get net change summary totals for NY Metro
+SELECT i.origin, sum(i.returns - o.returns) AS Net_Change_Returns,
+sum(i.exemptions - o.exemptions) AS Net_Change_Exempts
+FROM inflow_2011_12_totals AS i JOIN outflow_2011_12_totals AS o
+WHERE i.uid = o.uid
+AND i.origin LIKE '9%%' AND i.destination IN 
+    ('34003','34013','34017','34019','34023','34025','34027','34029','34031',
+      '34035','34037','34039','36005','36027','36047','36059','36061','36071',
+      '36079','36081','36085','36087','36103','36119','42103')
+AND o.destination LIKE '9%%' AND o.origin IN 
+    ('34003','34013','34017','34019','34023','34025','34027','34029','34031',
+      '34035','34037','34039','36005','36027','36047','36059','36061','36071',
+      '36079','36081','36085','36087','36103','36119','42103')
+GROUP BY i.origin
+
+

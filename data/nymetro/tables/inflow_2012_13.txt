@@ -1,0 +1,227 @@
+NY Metro In Migration
+inflow_2012_13
++-----------+------------------------------------------------+---------+---------+
+| cbsa_code |                   cbsa_name                    | returns | exempts |
++-----------+------------------------------------------------+---------+---------+
+|   33100   |   Miami-Fort Lauderdale-West Palm Beach, FL    |  11155  |  17515  |
+|   37980   |  Philadelphia-Camden-Wilmington, PA-NJ-DE-MD   |   9919  |  15568  |
+|   47900   |  Washington-Arlington-Alexandria, DC-VA-MD-WV  |   6499  |   9350  |
+|   31080   |       Los Angeles-Long Beach-Anaheim, CA       |   6005  |   8595  |
+|   14460   |         Boston-Cambridge-Newton, MA-NH         |   6099  |   8495  |
+|   14860   |        Bridgeport-Stamford-Norwalk, CT         |   4635  |   7644  |
+|   12060   |       Atlanta-Sandy Springs-Roswell, GA        |   3653  |   6293  |
+|   45940   |                  Trenton, NJ                   |   3153  |   5640  |
+|   10900   |       Allentown-Bethlehem-Easton, PA-NJ        |   3129  |   5629  |
+|   16980   |       Chicago-Naperville-Elgin, IL-IN-WI       |   3782  |   5622  |
+|   36740   |         Orlando-Kissimmee-Sanford, FL          |   2798  |   4959  |
+|   45300   |      Tampa-St. Petersburg-Clearwater, FL       |   2706  |   4437  |
+|   41860   |       San Francisco-Oakland-Hayward, CA        |   3208  |   4397  |
+|   19100   |        Dallas-Fort Worth-Arlington, TX         |   1980  |   3229  |
+|   12580   |         Baltimore-Columbia-Towson, MD          |   1968  |   3195  |
+|   28740   |                  Kingston, NY                  |   1695  |   2848  |
+|   35300   |             New Haven-Milford, CT              |   1736  |   2714  |
+|   26420   |      Houston-The Woodlands-Sugar Land, TX      |   1614  |   2584  |
+|   10580   |          Albany-Schenectady-Troy, NY           |   1636  |   2472  |
+|   20700   |              East Stroudsburg, PA              |   1212  |   2377  |
+|   25540   |    Hartford-West Hartford-East Hartford, CT    |   1442  |   2231  |
+|   41740   |             San Diego-Carlsbad, CA             |   1459  |   2181  |
+|   16740   |       Charlotte-Concord-Gastonia, NC-SC        |   1156  |   2059  |
+|   38060   |          Phoenix-Mesa-Scottsdale, AZ           |   1260  |   2020  |
+|   42660   |          Seattle-Tacoma-Bellevue, WA           |   1292  |   1880  |
+|   12420   |             Austin-Round Rock, TX              |   1224  |   1784  |
+|   29820   |        Las Vegas-Henderson-Paradise, NV        |   951   |   1565  |
+|   42540   |      Scranton--Wilkes-Barre--Hazleton, PA      |   831   |   1543  |
+|   19820   |          Detroit-Warren-Dearborn, MI           |   930   |   1536  |
+|   39300   |           Providence-Warwick, RI-MA            |   1037  |   1519  |
+|   39580   |                  Raleigh, NC                   |   839   |   1467  |
+|   47260   |   Virginia Beach-Norfolk-Newport News, VA-NC   |   811   |   1426  |
+|   41940   |       San Jose-Sunnyvale-Santa Clara, CA       |   871   |   1345  |
+|   12100   |          Atlantic City-Hammonton, NJ           |   802   |   1337  |
+|   38300   |                 Pittsburgh, PA                 |   820   |   1212  |
+|   15380   |     Buffalo-Cheektowaga-Niagara Falls, NY      |   868   |   1210  |
+|   18140   |                  Columbus, OH                  |   633   |   1035  |
+|   40380   |                 Rochester, NY                  |   719   |   1018  |
+|   33460   |    Minneapolis-St. Paul-Bloomington, MN-WI     |   700   |   1012  |
+|   15980   |           Cape Coral-Fort Myers, FL            |   587   |   958   |
+|   27260   |                Jacksonville, FL                |   605   |   934   |
+|   45060   |                  Syracuse, NY                  |   601   |   889   |
+|   40060   |                  Richmond, VA                  |   530   |   887   |
+|   35840   |       North Port-Sarasota-Bradenton, FL        |   557   |   870   |
+|   38940   |               Port St. Lucie, FL               |   505   |   844   |
+|   19660   |     Deltona-Daytona Beach-Ormond Beach, FL     |   476   |   843   |
+|   40140   |      Riverside-San Bernardino-Ontario, CA      |   518   |   837   |
+|   17460   |              Cleveland-Elyria, OH              |   537   |   834   |
+|   19740   |           Denver-Aurora-Lakewood, CO           |   591   |   767   |
+|   39740   |                  Reading, PA                   |   412   |   763   |
+|   49340   |                Worcester, MA-CT                |   471   |   748   |
+|   46520   |               Urban Honolulu, HI               |   459   |   672   |
+|   37340   |       Palm Bay-Melbourne-Titusville, FL        |   400   |   643   |
+|   29460   |           Lakeland-Winter Haven, FL            |   360   |   636   |
+|   35980   |             Norwich-New London, CT             |   381   |   633   |
+|   41700   |         San Antonio-New Braunfels, TX          |   379   |   622   |
+|   34980   | Nashville-Davidson--Murfreesboro--Franklin, TN |   396   |   612   |
+|   20500   |             Durham-Chapel Hill, NC             |   405   |   590   |
+|   34940   |       Naples-Immokalee-Marco Island, FL        |   349   |   576   |
+|   17140   |              Cincinnati, OH-KY-IN              |   368   |   531   |
+|   38900   |      Portland-Vancouver-Hillsboro, OR-WA       |   408   |   523   |
+|   13780   |                 Binghamton, NY                 |   328   |   504   |
+|   44140   |                Springfield, MA                 |   331   |   488   |
+|   26900   |        Indianapolis-Carmel-Anderson, IN        |   264   |   477   |
+|   41180   |                St. Louis, MO-IL                |   335   |   471   |
+|   27340   |                Jacksonville, NC                |   257   |   468   |
+|   22180   |                Fayetteville, NC                |   223   |   446   |
+|   26460   |                   Hudson, NY                   |   261   |   441   |
+|   35380   |            New Orleans-Metairie, LA            |   320   |   441   |
+|   29540   |                 Lancaster, PA                  |   250   |   432   |
+|   45860   |                 Torrington, CT                 |   276   |   422   |
+|   25420   |            Harrisburg-Carlisle, PA             |   261   |   420   |
+|   34820   | Myrtle Beach-Conway-North Myrtle Beach, SC-NC  |   257   |   408   |
+|   27060   |                   Ithaca, NY                   |   319   |   396   |
+|   24660   |           Greensboro-High Point, NC            |   224   |   393   |
+|   32820   |               Memphis, TN-MS-AR                |   222   |   379   |
+|   16700   |        Charleston-North Charleston, SC         |   237   |   372   |
+|   41620   |               Salt Lake City, UT               |   215   |   345   |
+|   11460   |                 Ann Arbor, MI                  |   256   |   331   |
+|   28140   |               Kansas City, MO-KS               |   235   |   327   |
+|   36100   |                   Ocala, FL                    |   174   |   318   |
+|   31700   |             Manchester-Nashua, NH              |   195   |   313   |
+|   33340   |       Milwaukee-Waukesha-West Allis, WI        |   216   |   307   |
+|   17900   |                  Columbia, SC                  |   183   |   300   |
+|   38860   |          Portland-South Portland, ME           |   226   |   299   |
+|   40900   |    Sacramento--Roseville--Arden-Arcade, CA     |   196   |   292   |
+|   46060   |                   Tucson, AZ                   |   198   |   287   |
+|   17820   |              Colorado Springs, CO              |   154   |   279   |
+|   42340   |                  Savannah, GA                  |   181   |   276   |
+|   45220   |                Tallahassee, FL                 |   188   |   275   |
+|   31540   |                  Madison, WI                   |   201   |   263   |
+|   21340   |                  El Paso, TX                   |   133   |   245   |
+|   37100   |        Oxnard-Thousand Oaks-Ventura, CA        |   168   |   243   |
+|   46540   |                 Utica-Rome, NY                 |   147   |   238   |
+|   36140   |                 Ocean City, NJ                 |   136   |   228   |
+|   31140   |       Louisville/Jefferson County, KY-IN       |   151   |   226   |
+|   23540   |                Gainesville, FL                 |   147   |   221   |
+|   48060   |            Watertown-Fort Drum, NY             |   116   |   214   |
+|   12700   |              Barnstable Town, MA               |   171   |   213   |
+|   28660   |               Killeen-Temple, TX               |   100   |   208   |
+|   14500   |                  Boulder, CO                   |   148   |   202   |
+|   49180   |               Winston-Salem, NC                |   122   |   193   |
+|   15540   |        Burlington-South Burlington, VT         |   149   |   192   |
+|   16820   |              Charlottesville, VA               |   143   |   177   |
+|   49620   |                York-Hanover, PA                |   111   |   172   |
+|   13820   |             Birmingham-Hoover, AL              |   112   |   169   |
+|   48900   |                 Wilmington, NC                 |   119   |   160   |
+|   36420   |               Oklahoma City, OK                |   110   |   145   |
+|   47220   |             Vineland-Bridgeton, NJ             |    87   |   141   |
+|   17300   |               Clarksville, TN-KY               |    73   |   140   |
+|   20100   |                   Dover, DE                    |    75   |   135   |
+|   10420   |                   Akron, OH                    |   103   |   134   |
+|   36580   |                  Oneonta, NY                   |    86   |   134   |
+|   25940   |    Hilton Head Island-Bluffton-Beaufort, SC    |    70   |   130   |
+|   42680   |            Sebastian-Vero Beach, FL            |    90   |   128   |
+|   17200   |            Claremont-Lebanon, NH-VT            |   105   |   125   |
+|   38340   |                 Pittsfield, MA                 |    85   |   121   |
+|   39460   |                Punta Gorda, FL                 |    64   |   111   |
+|   30460   |             Lexington-Fayette, KY              |    71   |   110   |
+|   36540   |          Omaha-Council Bluffs, NE-IA           |    76   |   105   |
+|   42200   |         Santa Maria-Santa Barbara, CA          |    84   |   105   |
+|   10740   |                Albuquerque, NM                 |    74   |   104   |
+|   11260   |                 Anchorage, AK                  |    68   |   103   |
+|   44300   |               State College, PA                |    71   |   101   |
+|   28580   |                  Key West, FL                  |    71   |    96   |
+|   24860   |        Greenville-Anderson-Mauldin, SC         |    60   |    91   |
+|   26140   |             Homosassa Springs, FL              |    53   |    89   |
+|   28940   |                 Knoxville, TN                  |    62   |    89   |
+|   39900   |                    Reno, NV                    |    64   |    87   |
+|   12260   |         Augusta-Richmond County, GA-SC         |    46   |    86   |
+|   17980   |                Columbus, GA-AL                 |    43   |    85   |
+|   26980   |                 Iowa City, IA                  |    56   |    82   |
+|   30780   |    Little Rock-North Little Rock-Conway, AR    |    48   |    80   |
+|   22220   |     Fayetteville-Springdale-Rogers, AR-MO      |    36   |    75   |
+|   48620   |                  Wichita, KS                   |    43   |    75   |
+|   14020   |                Bloomington, IN                 |    60   |    74   |
+|   29620   |            Lansing-East Lansing, MI            |    58   |    71   |
+|   23420   |                   Fresno, CA                   |    49   |    70   |
+|   12940   |                Baton Rouge, LA                 |    48   |    69   |
+|   46700   |             Vallejo-Fairfield, CA              |    44   |    69   |
+|   35100   |                  New Bern, NC                  |    40   |    68   |
+|   46140   |                   Tulsa, OK                    |    43   |    68   |
+|   40340   |                 Rochester, MN                  |    40   |    67   |
+|   11700   |                 Asheville, NC                  |    54   |    66   |
+|   18180   |                  Concord, NH                   |    51   |    66   |
+|   42140   |                  Santa Fe, NM                  |    48   |    66   |
+|   24020   |                Glens Falls, NY                 |    48   |    64   |
+|   24340   |            Grand Rapids-Wyoming, MI            |    50   |    64   |
+|   42220   |                 Santa Rosa, CA                 |    54   |    64   |
+|   26620   |                 Huntsville, AL                 |    43   |    63   |
+|   33660   |                   Mobile, AL                   |    40   |    61   |
+|   30140   |                  Lebanon, PA                   |    32   |    60   |
+|   19380   |                   Dayton, OH                   |    40   |    59   |
+|   42100   |           Santa Cruz-Watsonville, CA           |    46   |    57   |
+|   12020   |            Athens-Clarke County, GA            |    35   |    56   |
+|   14260   |                 Boise City, ID                 |    33   |    51   |
+|   41540   |                Salisbury, MD-DE                |    39   |    51   |
+|   37860   |         Pensacola-Ferry Pass-Brent, FL         |    31   |    49   |
+|   25980   |                 Hinesville, GA                 |    23   |    48   |
+|   39340   |                 Provo-Orem, UT                 |    28   |    48   |
+|   16580   |              Champaign-Urbana, IL              |    32   |    47   |
+|   22660   |                Fort Collins, CO                |    35   |    47   |
+|   16860   |               Chattanooga, TN-GA               |    31   |    46   |
+|   24780   |                 Greenville, NC                 |    26   |    45   |
+|   27140   |                  Jackson, MS                   |    32   |    44   |
+|   21660   |                   Eugene, OR                   |    39   |    42   |
+|   45780   |                   Toledo, OH                   |    31   |    42   |
+|   19780   |         Des Moines-West Des Moines, IA         |    29   |    41   |
+|   41500   |                  Salinas, CA                   |    31   |    41   |
+|   15940   |              Canton-Massillon, OH              |    28   |    38   |
+|   17860   |                  Columbia, MO                  |    33   |    37   |
+|   32580   |          McAllen-Edinburg-Mission, TX          |    27   |    34   |
+|   45540   |                The Villages, FL                |    25   |    34   |
+|   12540   |                Bakersfield, CA                 |    22   |    32   |
+|   12740   |                   Barre, VT                    |    26   |    31   |
+|   29940   |                  Lawrence, KS                  |    26   |    30   |
+|   30700   |                  Lincoln, NE                   |    23   |    29   |
+|   44060   |           Spokane-Spokane Valley, WA           |    23   |    29   |
+|   24640   |              Greenfield Town, MA               |    22   |    28   |
+|   36260   |              Ogden-Clearfield, UT              |    18   |    27   |
+|   42020   | San Luis Obispo-Paso Robles-Arroyo Grande, CA  |    24   |    27   |
+|   12620   |                   Bangor, ME                   |    20   |    26   |
+|   34900   |                    Napa, CA                    |    20   |    26   |
+|   14740   |            Bremerton-Silverdale, WA            |    14   |    25   |
+|   18880   |     Crestview-Fort Walton Beach-Destin, FL     |    14   |    25   |
+|   43900   |                Spartanburg, SC                 |    12   |    24   |
+|   44700   |               Stockton-Lodi, CA                |    13   |    24   |
+|   13540   |                 Bennington, VT                 |    13   |    23   |
+|   33700   |                  Modesto, CA                   |    10   |    23   |
+|   43780   |          South Bend-Mishawaka, IN-MI           |    19   |    23   |
+|   16620   |                 Charleston, WV                 |    12   |    22   |
+|   44940   |                   Sumter, SC                   |    14   |    22   |
+|   31420   |             Macon-Bibb County, GA              |    12   |    21   |
+|   33860   |                 Montgomery, AL                 |    14   |    21   |
+|   21500   |                    Erie, PA                    |    16   |    20   |
+|   22500   |                  Florence, SC                  |    12   |    20   |
+|   27980   |          Kahului-Wailuku-Lahaina, HI           |    11   |    20   |
+|   39060   |                 Pottsville, PA                 |    10   |    20   |
+|   17780   |           College Station-Bryan, TX            |    16   |    19   |
+|   29180   |                 Lafayette, LA                  |    15   |    19   |
+|   14580   |                  Bozeman, MT                   |    10   |    18   |
+|   31340   |                 Lynchburg, VA                  |    14   |    18   |
+|   37460   |                Panama City, FL                 |    10   |    18   |
+|   27920   |               Junction City, KS                |    11   |    17   |
+|   41100   |                 St. George, UT                 |    11   |    17   |
+|   24060   |              Glenwood Springs, CO              |    14   |    16   |
+|   25060   |         Gulfport-Biloxi-Pascagoula, MS         |    12   |    16   |
+|   29200   |          Lafayette-West Lafayette, IN          |    14   |    16   |
+|   16940   |                  Cheyenne, WY                  |    11   |    15   |
+|   21300   |                   Elmira, NY                   |    12   |    15   |
+|   22420   |                   Flint, MI                    |    12   |    15   |
+|   33540   |                  Missoula, MT                  |    14   |    15   |
+|   36500   |              Olympia-Tumwater, WA              |    11   |    15   |
+|   28020   |             Kalamazoo-Portage, MI              |    13   |    14   |
+|   49660   |       Youngstown-Warren-Boardman, OH-PA        |    14   |    14   |
+|   11900   |                   Athens, OH                   |    13   |    13   |
+|   24260   |                Grand Island, NE                |    11   |    13   |
+|   34060   |                 Morgantown, WV                 |    11   |    13   |
+|   28300   |                   Keene, NH                    |    12   |    12   |
+|   46220   |                 Tuscaloosa, AL                 |    11   |    12   |
+|   20780   |                  Edwards, CO                   |    10   |    10   |
++-----------+------------------------------------------------+---------+---------+
