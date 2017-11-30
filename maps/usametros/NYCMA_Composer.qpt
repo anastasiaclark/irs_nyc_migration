@@ -1,0 +1,86 @@
+<Composer title="Receivers" visible="1">
+ <Composition resizeToContentsMarginLeft="0" snapping="0" showPages="1" guidesVisible="1" resizeToContentsMarginTop="0" worldFileMap="" alignmentSnap="1" printResolution="300" paperWidth="127" gridVisible="0" snapGridOffsetX="0" smartGuides="1" snapGridOffsetY="0" resizeToContentsMarginRight="0" snapTolerancePixels="5" printAsRaster="0" generateWorldFile="0" paperHeight="101.6" numPages="1" snapGridResolution="10" resizeToContentsMarginBottom="0">
+  <symbol alpha="1" clip_to_extent="1" type="fill" name="">
+   <layer pass="0" class="SimpleFill" locked="0">
+    <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+    <prop k="color" v="255,255,255,255"/>
+    <prop k="joinstyle" v="miter"/>
+    <prop k="offset" v="0,0"/>
+    <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+    <prop k="offset_unit" v="MM"/>
+    <prop k="outline_color" v="0,0,0,255"/>
+    <prop k="outline_style" v="no"/>
+    <prop k="outline_width" v="0.26"/>
+    <prop k="outline_width_unit" v="MM"/>
+    <prop k="style" v="solid"/>
+   </layer>
+  </symbol>
+  <ComposerLegend symbolWidth="5" title="" rasterBorderWidth="0" titleAlignment="1" map="2" wmsLegendWidth="50" rasterBorderColor="0,0,0,255" wrapChar="" fontColor="#000000" legendFilterByAtlas="1" columnCount="1" wmsLegendHeight="25" columnSpace="1" symbolHeight="3" equalColumnWidth="0" resizeToContents="0" splitLayer="0" boxSpace="1" rasterBorder="1">
+   <styles>
+    <style marginBottom="1" name="title">
+     <styleFont description="MS Shell Dlg 2,16,-1,5,50,0,0,0,0,0" style=""/>
+    </style>
+    <style marginTop="1" name="group">
+     <styleFont description="MS Shell Dlg 2,14,-1,5,50,0,0,0,0,0" style=""/>
+    </style>
+    <style marginTop="1" name="subgroup">
+     <styleFont description="MS Shell Dlg 2,7,-1,5,75,0,0,0,0,0" style=""/>
+    </style>
+    <style marginTop="1" name="symbol">
+     <styleFont description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
+    </style>
+    <style marginTop="1" marginLeft="2" name="symbolLabel">
+     <styleFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" style=""/>
+    </style>
+   </styles>
+   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
+    <customproperties/>
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Receivers_from_NYC_216320171129181808902" source="F:/NYCMA_Paper_Shps/Receivers_from_NYC_2163.shp" name="Receivers_from_NYC_2163">
+     <customproperties>
+      <property key="legend/title-label" value="Receiving Metros"/>
+      <property key="showFeatureCount" value="0"/>
+     </customproperties>
+    </layer-tree-layer>
+   </layer-tree-group>
+   <ComposerItem pagey="71.413" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="95.4758" y="71.413" visibility="1" zValue="4" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="28.4995" outlineWidth="0.1" excludeFromExports="0" uuid="{0d5f6bde-1093-4244-9989-c45694becfb7}" height="26.7693" itemRotation="0" frame="false" pagex="95.4758">
+    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+    <customproperties/>
+   </ComposerItem>
+  </ComposerLegend>
+  <ComposerMap followPreset="false" mapRotation="0" keepLayerSet="false" followPresetName="" id="2" previewMode="Cache" drawCanvasItems="true">
+   <Extent ymin="-1125884.55012676492333412" xmin="-5900142.87209965288639069" ymax="-332889.3983467947691679" xmax="-5221442.0284073781222105"/>
+   <LayerSet/>
+   <Grid/>
+   <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
+   <ComposerItem pagey="75.7479" page="1" id="" lastValidViewScaleFactor="3.96734" positionMode="0" positionLock="false" x="40.7315" y="75.7479" visibility="1" zValue="3" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="19.1581" outlineWidth="0.1" excludeFromExports="0" uuid="{702241e8-2079-4476-bc89-9f764afa7aed}" height="22.3844" itemRotation="0" frame="true" pagex="40.7315">
+    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+    <customproperties/>
+   </ComposerItem>
+  </ComposerMap>
+  <ComposerMap followPreset="false" mapRotation="330" keepLayerSet="false" followPresetName="" id="1" previewMode="Cache" drawCanvasItems="true">
+   <Extent ymin="1491514.33062214870005846" xmin="-4683543.59593895543366671" ymax="4459310.95102425292134285" xmax="-1222740.19740893575362861"/>
+   <LayerSet/>
+   <Grid/>
+   <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
+   <ComposerItem pagey="68.0329" page="1" id="" lastValidViewScaleFactor="3.96734" positionMode="0" positionLock="false" x="2.95884" y="68.0329" visibility="1" zValue="2" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="35.0412" outlineWidth="0.1" excludeFromExports="0" uuid="{20745140-fee4-49d2-8dcf-e433b2151d4b}" height="30.0494" itemRotation="0" frame="true" pagex="2.95884">
+    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+    <customproperties/>
+   </ComposerItem>
+  </ComposerMap>
+  <ComposerMap followPreset="false" mapRotation="0" keepLayerSet="false" followPresetName="" id="0" previewMode="Cache" drawCanvasItems="true">
+   <Extent ymin="-2126555.19770604185760021" xmin="-2115113.16079319454729557" ymax="758804.37338265543803573" xmax="2739493.66415850538760424"/>
+   <LayerSet/>
+   <Grid/>
+   <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
+   <ComposerItem pagey="0" page="1" id="" lastValidViewScaleFactor="3.96734" positionMode="0" positionLock="false" x="1.45968" y="0" visibility="1" zValue="1" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="124.081" outlineWidth="0.3" excludeFromExports="0" uuid="{31480819-a61f-4cf4-8456-7affa52d519b}" height="73.7479" itemRotation="0" frame="false" pagex="1.45968">
+    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+    <customproperties/>
+   </ComposerItem>
+  </ComposerMap>
+  <customproperties/>
+ </Composition>
+</Composer>
