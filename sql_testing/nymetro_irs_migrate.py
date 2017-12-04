@@ -1,7 +1,8 @@
 #Frank Oct 30, 2017
 #Create formatted text tables and csvs from irs migration database for NYC
+#Used to verify metro results from Jupyter Notebook
 #Set first time: path to database
-#Change each time: outfolder, target, series strings
+#Change each time: outfolder, target, series labels
 
 from prettytable import PrettyTable
 import sqlite3, csv, os
@@ -35,7 +36,7 @@ def dosql(series,sql,label):
     print('* Created tables for ',series, label,'\n')
 
 #Change outfolder to a title that reflects what the data is
-outfolder='nyphilly_test'
+outfolder='nymetro'
 if not os.path.exists(outfolder):
     os.makedirs(os.path.join(outfolder,'tables'))
     os.makedirs(os.path.join(outfolder,'csv'))
@@ -104,25 +105,10 @@ AND i.origin LIKE '9%%' AND i.destination IN %s \
 AND o.destination LIKE '9%%' AND o.origin IN %s \
 GROUP BY i.origin"
 
-##sqltest1="SELECT md.cbsa_code AS cbsa_dest, md.cbsa_name AS cbsa_name_dest, destination, st_dest_abbrv, \
-##origin, st_orig_abbrv, co_orig_name, mo.cbsa_code AS cbsa_orig, mo.cbsa_name AS cbsa_name_orig, returns, exemptions \
-##FROM %s i \
-##LEFT JOIN metros md ON i.destination = md.fips \
-##LEFT JOIN metros mo ON i.origin = mo.fips \
-##WHERE md.cbsa_code =  '35620' AND mo.cbsa_code = '37980'"
-##
-##sqltest2="SELECT mo.cbsa_code AS cbsa_orig, mo.cbsa_name AS cbsa_name_orig, origin, st_orig_abbrv, \
-##destination, st_dest_abbrv, co_dest_name, md.cbsa_code AS cbsa_dest, md.cbsa_name AS cbsa_name_dest, returns, exemptions \
-##FROM %s o \
-##LEFT JOIN metros md ON o.destination = md.fips \
-##LEFT JOIN metros mo ON o.origin = mo.fips \
-##WHERE mo.cbsa_code =  '35620' AND md.cbsa_code = '37980'" 
-
 con=sqlite3.connect(sqldb)
 curs=con.cursor()
 
 #Change the series labels to reflect the geography for the table
-
 
 for tab in tabs_inflow:
     statement=sql1 %(tab,target_met,target_met)
@@ -140,12 +126,5 @@ for tab in tabs_net:
     statement=sql4 %(tab[0], tab[1], target, target)
     dosql('NY Metro Total Net Migration',statement,str(tab[0])+'_'+str(tab[1]))
 
-##tab = 'inflow_2011_12'
-##statement=sqltest1 %('inflow_2011_12')
-##dosql('NY - Philly Inflow Test',statement,tab)
-##
-##tab = 'outflow_2011_12'
-##statement=sqltest1 %('inflow_2011_12')
-##dosql('NY - Philly Outflow Test',statement,tab)
-    
+   
 con.close()

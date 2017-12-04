@@ -1,4 +1,4 @@
 #Ignore articles folder and the database
-literature/
+literature/articles
 *.sqlite
 scripts/temp*

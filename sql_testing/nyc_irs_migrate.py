@@ -1,7 +1,8 @@
 #Frank Sept 25, 2017
 #Create formatted text tables and csvs from irs migration database for NYC
+#Used to verify county results from Jupyter Notebook
 #Set first time: path to database
-#Change each time: outfolder, target, series strings
+#Change each time: outfolder, target, series labels
 
 from prettytable import PrettyTable
 import sqlite3, csv, os
@@ -41,7 +42,9 @@ if not os.path.exists(outfolder):
     os.makedirs(os.path.join(outfolder,'csv'))
     
 #Set first time - path to database
-sqldb=os.path.join('irsmig_county_database','irs_migration_county.sqlite')
+data_path = '/home/franknitty/irs_nyc_migration/data'
+db = 'irsmig_county_database'
+sqldb=os.path.join(data_path,db,'irs_migration_county.sqlite')
 #Change target to FIPS code geographies to process
 target="('36005','36047','36061','36081','36085')" #this is nyc
 #target="('06037')" #this is la
@@ -54,15 +57,17 @@ tabs_intotal=list((item+'_totals' for item in tabs_inflow))
 tabs_outtotal=list((item+'_totals' for item in tabs_outflow))
 tabs_net=list(zip(tabs_intotal,tabs_outtotal))
 
-
+#Inflows
 sql1='SELECT origin, st_orig_abbrv, co_orig_name, sum(returns) AS returns, sum(exemptions) AS exempts \
 FROM %s WHERE destination IN %s AND origin NOT IN %s GROUP BY origin, st_orig_abbrv, co_orig_name \
 ORDER BY sum(exemptions) DESC'
 
+#Outflows
 sql2='SELECT destination, st_dest_abbrv, co_dest_name, sum(returns) AS returns, sum(exemptions) AS exempts \
 FROM %s WHERE origin IN %s AND destination NOT IN %s GROUP BY destination, st_dest_abbrv, co_dest_name \
 ORDER BY sum(exemptions) DESC'
 
+#Net change
 sql3="SELECT county, stname, coname, sum(returns) AS returns, sum(exempts) AS exempts FROM \
 (SELECT origin AS county, st_orig_abbrv AS stname, co_orig_name AS coname, \
 sum(returns) AS returns, sum(exemptions) AS exempts \
@@ -75,6 +80,7 @@ FROM %s WHERE origin IN %s AND destination NOT IN %s \
 GROUP BY destination) \
 GROUP BY county ORDER BY exempts DESC"
 
+#Summary net change
 sql4="SELECT i.origin, sum(i.returns - o.returns) AS Net_Change_Returns,\
 sum(i.exemptions - o.exemptions) AS Net_Change_Exempts \
 FROM %s AS i JOIN %s AS o \
