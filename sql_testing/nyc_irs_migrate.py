@@ -42,7 +42,7 @@ if not os.path.exists(outfolder):
     os.makedirs(os.path.join(outfolder,'csv'))
     
 #Set first time - path to database
-data_path = '/home/franknitty/irs_nyc_migration/data'
+data_path = '~/irs_nyc_migration/data'
 db = 'irsmig_county_database'
 sqldb=os.path.join(data_path,db,'irs_migration_county.sqlite')
 #Change target to FIPS code geographies to process
