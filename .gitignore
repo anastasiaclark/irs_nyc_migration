@@ -2,3 +2,4 @@
 literature/articles
 *.sqlite
 scripts/temp*
+writing/
