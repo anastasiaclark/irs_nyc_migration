@@ -2,7 +2,7 @@
 
 Project files for the paper *New Yorkers on the Move: Recent Migration Trends for the City and Metro Area*. 
 
-Paper submitted to the WCIB Occasional Papers Series: http://zicklin.baruch.cuny.edu/centers/weissman/professionals/publications/occasional-papers-series.
+Paper submitted to the WCIB Occasional Papers Series, No. 15 published Feb 2018: https://zicklin.baruch.cuny.edu/faculty-research/centers-institutes/weissman-center-international-business/occasional-paper-series/
 
 Source and summary output data is saved in the data folder. Scripts for data processing and analysis are Python Jupyter Notebooks with Pandas stored in the scripts folder.
 
