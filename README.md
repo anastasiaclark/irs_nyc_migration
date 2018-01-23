@@ -14,6 +14,6 @@ The following are not included in this repo:
 
 - Articles for the literature review. Some were not used and several cannot be freely distributed. View the references.bib file in the literature folder for citations and links.
 
-- The paper itself. 
+- The paper itself, which is freely available but copyrighted.
 
 
